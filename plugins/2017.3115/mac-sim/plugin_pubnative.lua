@@ -1,20 +1,25 @@
 local Library = require "CoronaLibrary"
 
 -- Create library
-local lib = Library:new{ name='pubnative.sdk', publisherId='net.pubnative' }
+local lib = Library:new{ name='plugin.pubnative', publisherId='net.pubnative' }
 
 -------------------------------------------------------------------------------
 -- BEGIN (Insert your implementation starting here)
 -------------------------------------------------------------------------------
 
--- This sample implements the following Lua:
---
---    local pubnativeSdk = require "plugin_pubnative_sdk"
---    pubnativeSdk.test()
---
-lib.test = function()
-	native.showAlert( 'Hello, World!', 'pubnativeSdk.test() invoked', { 'OK' } )
-	print( 'Hello, World!' )
+lib.init = function()
+	native.showAlert( 'Success!', 'pubnativeSdk.init() invoked', { 'OK' } )
+	print( 'Success!' )
+end
+
+lib.show = function()
+	native.showAlert( 'Success!', 'pubnativeSdk.show() invoked', { 'OK' } )
+	print( 'Success!' )
+end
+
+lib.hide = function()
+	native.showAlert( 'Success!', 'pubnativeSdk.hide() invoked', { 'OK' } )
+	print( 'Success!' )
 end
 
 -------------------------------------------------------------------------------
