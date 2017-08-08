@@ -5,8 +5,8 @@ local metadata =
 		format = 'staticLibrary',
 
 		-- This is the name without the 'lib' prefix.
-		-- In this case, the static library is called: libPubnative.a
-		staticLibs = { 'pubnative', },
+		-- In this case, the static library is called: libPubnativeBanner.a
+		staticLibs = { 'pubnativeBanner', },
 
 		frameworks = {},
 		frameworksOptional = {},

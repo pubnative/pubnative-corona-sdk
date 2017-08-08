@@ -1,14 +1,14 @@
 local Library = require "CoronaLibrary"
 
 -- Create library
-local lib = Library:new{ name='plugin.pubnative', publisherId='net.pubnative' }
+local lib = Library:new{ name='plugin.pubnative.banner', publisherId='net.pubnative' }
 
 -------------------------------------------------------------------------------
 -- BEGIN (Insert your implementation starting here)
 -------------------------------------------------------------------------------
 
-lib.init = function()
-	native.showAlert( 'Success!', 'pubnativeSdk.init() invoked', { 'OK' } )
+lib.load = function()
+	native.showAlert( 'Success!', 'pubnativeSdk.load() invoked', { 'OK' } )
 	print( 'Success!' )
 end
 
