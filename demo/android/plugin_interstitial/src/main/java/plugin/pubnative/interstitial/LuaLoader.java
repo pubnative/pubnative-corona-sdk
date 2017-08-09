@@ -201,27 +201,12 @@ public class LuaLoader implements JavaFunction, CoronaRuntimeListener {
             return 0;
         }
 
-        try {
-            activity.runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    // Fetch a reference to the Corona activity.
-                    // Note: Will be null if the end-user has just backed out of the activity.
-                    CoronaActivity activity = CoronaEnvironment.getCoronaActivity();
-                    if (activity == null) {
-                        return;
-                    }
-
-                    if (mInterstitial == null) {
-                        mInterstitial = new PNInterstitialPlugin();
-                    }
-
-                    mInterstitial.load(mRuntime, activity, mAppToken, mPlacement, loadListener);
-                }
-            });
-        } catch (final Exception ex) {
-            ex.printStackTrace();
+        if (mInterstitial == null) {
+            mInterstitial = new PNInterstitialPlugin();
         }
+
+        mInterstitial.load(mRuntime, activity, mAppToken, mPlacement, loadListener);
+
         return 0;
     }
 

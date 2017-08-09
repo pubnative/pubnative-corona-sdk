@@ -173,10 +173,11 @@ local pubnativeShowBannerButton = widget.newButton
 	label = "Show",
   onRelease = function( event )
   -- --------------------------------------------------------------------------
-  -- For show pubnative Banner you should pass a three paramters into load()
-  -- 1. Position banner on the screen (could be 0 for TOP or 1 for BOTTOM)
-  -- 2. Listener for detecting impression behavior from Pubnative SDK
-  -- 3. Listener for detecting click behavior from Pubnative SDK
+  -- For displaying banner on the screen, you should set banner position
+  -- by methods setBannerPositionTop() or setBannerPositionBottom().
+  -- And then use show() method with two paramters
+  -- 1. Listener for detecting impression behavior from Pubnative SDK
+  -- 2. Listener for detecting click behavior from Pubnative SDK
   -- --------------------------------------------------------------------------
 		if(banner ~= nil and isReady) then
       if(bannerTop.isOn) then
