@@ -8,7 +8,7 @@ widget.setTheme( "widget_theme_android" );
 local bannerButton = widget.newButton
 {
 	label = "Banner";
-  onRelease = function(event)
+	onRelease = function(event)
 		composer.gotoScene("banner");
 	end,
 }
@@ -16,7 +16,7 @@ local bannerButton = widget.newButton
 local interstitialButton = widget.newButton
 {
 	label = "Interstitial";
-  onRelease = function(event)
+	onRelease = function(event)
 		composer.gotoScene("interstitial");
 	end,
 }
@@ -34,33 +34,33 @@ interstitialButton.y = bannerButton.y + bannerButton.contentHeight + interstitia
 -- show()
 function scene:show( event )
 
-    local sceneGroup = self.view
-    local phase = event.phase
+	local sceneGroup = self.view
+	local phase = event.phase
 
-    if ( phase == "will" ) then
-        -- Code here runs when the scene is still off screen (but is about to come on screen)
+	if ( phase == "will" ) then
+		-- Code here runs when the scene is still off screen (but is about to come on screen)
 
-    elseif ( phase == "did" ) then
-        -- Code here runs when the scene is entirely on screen
-        sceneGroup:insert( bannerButton )
-        sceneGroup:insert( interstitialButton )
-    end
+	elseif ( phase == "did" ) then
+		-- Code here runs when the scene is entirely on screen
+		sceneGroup:insert( bannerButton )
+		sceneGroup:insert( interstitialButton )
+	end
 end
 
 
 -- hide()
 function scene:hide( event )
 
-    local sceneGroup = self.view
-    local phase = event.phase
+	local sceneGroup = self.view
+	local phase = event.phase
 
-    if ( phase == "will" ) then
-        -- Code here runs when the scene is on screen (but is about to go off screen)
+	if ( phase == "will" ) then
+		-- Code here runs when the scene is on screen (but is about to go off screen)
 
-    elseif ( phase == "did" ) then
-        -- Code here runs immediately after the scene goes entirely off screen
+	elseif ( phase == "did" ) then
+		-- Code here runs immediately after the scene goes entirely off screen
 
-    end
+	end
 end
 
 -- -----------------------------------------------------------------------------------
