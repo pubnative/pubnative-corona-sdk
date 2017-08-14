@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">plugin.pubnative</string>
-    <string name="pubnative_sponsored_text">Sponsored</string>
-    <string name="ad">Ad</string>
+    <string name="app_name">plugin.pubnative.banner</string>
 </resources>
