@@ -23,8 +23,6 @@ public class PNBannerPlugin implements PNLayout.LoadListener, PNLayout.TrackList
         mCoronaRuntime = runtime;
         mLoadListener = loadListener;
 
-        Pubnative.init(context, appToken);
-
         mBanner = new PNBanner();
         mBanner.setLoadListener(this);
         mBanner.load(context, appToken, placement);

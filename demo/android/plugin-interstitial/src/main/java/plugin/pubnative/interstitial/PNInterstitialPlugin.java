@@ -25,8 +25,6 @@ public class PNInterstitialPlugin implements PNLayout.LoadListener, PNLayout.Tra
         mCoronaRuntime = runtime;
         mLoadListener = loadListener;
 
-        Pubnative.init(context, appToken);
-
         mInterstitial = new PNLargeLayout();
         mInterstitial.setLoadListener(this);
         mInterstitial.load(context, appToken, placement);
