@@ -1,1 +1,1 @@
-include ':app', ':plugin', ':plugin_interstitial'
+include ':app', ':plugin-banner', ':plugin-interstitial'
