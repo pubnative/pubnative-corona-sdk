@@ -175,9 +175,9 @@ local pubnativeShowBannerButton = widget.newButton
     -- --------------------------------------------------------------------------
     -- For displaying banner on the screen, you should set banner position
     -- by methods setBannerPositionTop() or setBannerPositionBottom().
-    -- And then use show() method with two paramters
-    -- 1. Listener for detecting impression behavior from Pubnative SDK
-    -- 2. Listener for detecting click behavior from Pubnative SDK
+    -- Set Impression Listener and Click Listener, 
+    -- if you want detect impressions and clicks for the ads
+    -- And then use show() method
     -- --------------------------------------------------------------------------
     if(banner ~= nil and isReady) then
       if(bannerTop.isOn) then
@@ -185,7 +185,9 @@ local pubnativeShowBannerButton = widget.newButton
       elseif(bannerBottom.isOn) then
         banner.setBannerPositionBottom()
       end
-      banner.show(impressionListener, clickListener);
+      banner.setImpressionListener(impressionListener)
+      banner.setClickListener(clickListener)
+      banner.show()
     end
   end,
 }

@@ -148,13 +148,16 @@ local pubnativeShowInterstitialButton = widget.newButton
   onRelease = function( event )
     -- --------------------------------------------------------------------------
     -- For show pubnative Banner you should pass a four paramters into load()
-    -- 1. Listener for detecting impression behavior from Pubnative SDK
-    -- 2. Listener for detecting click behavior from Pubnative SDK
-    -- 3. Listener for detecting show behavior from Pubnative SDK
-    -- 4. Listener for detecting hide behavior from Pubnative SDK
+    -- Set Impression Listener and Click Listener,
+    -- if you want detect impressions and clicks for the ads and
+    -- set Show and Hide listeners, if you want detect when Ad is shown or Hidden
     -- --------------------------------------------------------------------------
     if(interstitial ~= nil and isReady) then
-      interstitial.show(impressionListener, clickListener, showListener, hideListener);
+      interstitial.setImpressionListener(impressionListener)
+      interstitial.setClickListener(clickListener)
+      interstitial.setShowListener(showListener)
+      interstitial.setHideListener(hideListener)
+      interstitial.show()
     end
   end,
 }

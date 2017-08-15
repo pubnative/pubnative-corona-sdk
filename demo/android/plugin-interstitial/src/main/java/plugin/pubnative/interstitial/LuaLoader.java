@@ -95,6 +95,10 @@ public class LuaLoader implements JavaFunction, CoronaRuntimeListener {
                 new LoadWrapper(),
                 new ShowWrapper(),
                 new HideWrapper(),
+                new SetImpressionListenerWrapper(),
+                new SetClickListenerWrapper(),
+                new SetShowListenerWrapper(),
+                new SetHideListenerWrapper(),
         };
         String libName = L.toString(1);
         L.register(libName, luaFunctions);
@@ -348,29 +352,6 @@ public class LuaLoader implements JavaFunction, CoronaRuntimeListener {
          */
         @Override
         public int invoke(LuaState L) {
-
-            int index = 1;
-
-            if (CoronaLua.isListener(L, index, EVENT_NAME)) {
-                impressionListener = CoronaLua.newRef(L, index);
-            }
-            index++;
-
-            if (CoronaLua.isListener(L, index, EVENT_NAME)) {
-                clickListener = CoronaLua.newRef(L, index);
-            }
-            index++;
-
-            if (CoronaLua.isListener(L, index, EVENT_NAME)) {
-                showListener = CoronaLua.newRef(L, index);
-            }
-            index++;
-
-            if (CoronaLua.isListener(L, index, EVENT_NAME)) {
-                hideListener = CoronaLua.newRef(L, index);
-            }
-            index++;
-
             return show();
         }
     }
@@ -392,6 +373,122 @@ public class LuaLoader implements JavaFunction, CoronaRuntimeListener {
         @Override
         public int invoke(LuaState L) {
             return hide();
+        }
+    }
+
+    /**
+     * Implements the pubnative.setImpressionLisatener() Lua function.
+     */
+    private class SetImpressionListenerWrapper implements NamedJavaFunction {
+        /**
+         * Gets the name of the Lua function as it would appear in the Lua script.
+         *
+         * @return Returns the name of the custom Lua function.
+         */
+        @Override
+        public String getName() {
+            return "setImpressionListener";
+        }
+
+        @Override
+        public int invoke(LuaState L) {
+
+            int index = 1;
+
+            impressionListener = CoronaLua.REFNIL;
+            if (CoronaLua.isListener(L, index, EVENT_NAME)) {
+                impressionListener = CoronaLua.newRef(L, index);
+            }
+            index++;
+
+            return 0;
+        }
+    }
+
+    /**
+     * Implements the pubnative.setClickListener() Lua function.
+     */
+    private class SetClickListenerWrapper implements NamedJavaFunction {
+        /**
+         * Gets the name of the Lua function as it would appear in the Lua script.
+         *
+         * @return Returns the name of the custom Lua function.
+         */
+        @Override
+        public String getName() {
+            return "setClickListener";
+        }
+
+        @Override
+        public int invoke(LuaState L) {
+
+            int index = 1;
+
+            clickListener = CoronaLua.REFNIL;
+            if (CoronaLua.isListener(L, index, EVENT_NAME)) {
+                clickListener = CoronaLua.newRef(L, index);
+            }
+            index++;
+
+            return 0;
+        }
+    }
+
+    /**
+     * Implements the pubnative.setShowListener() Lua function.
+     */
+    private class SetShowListenerWrapper implements NamedJavaFunction {
+        /**
+         * Gets the name of the Lua function as it would appear in the Lua script.
+         *
+         * @return Returns the name of the custom Lua function.
+         */
+        @Override
+        public String getName() {
+            return "setShowListener";
+        }
+
+        @Override
+        public int invoke(LuaState L) {
+
+            int index = 1;
+
+            showListener = CoronaLua.REFNIL;
+            if (CoronaLua.isListener(L, index, EVENT_NAME)) {
+                showListener = CoronaLua.newRef(L, index);
+            }
+            index++;
+
+            return 0;
+        }
+    }
+
+    /**
+     * Implements the pubnative.setHideListener() Lua function.
+     */
+    private class SetHideListenerWrapper implements NamedJavaFunction {
+        /**
+         * Gets the name of the Lua function as it would appear in the Lua script.
+         *
+         * @return Returns the name of the custom Lua function.
+         */
+        @Override
+        public String getName() {
+            return "setHideListener";
+        }
+
+        @Override
+        public int invoke(LuaState L) {
+
+            int index = 1;
+
+            hideListener = CoronaLua.REFNIL;
+            if (CoronaLua.isListener(L, index, EVENT_NAME)) {
+                hideListener = CoronaLua.newRef(L, index);
+            }
+            index++;
+
+            return 0;
         }
     }
 }

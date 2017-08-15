@@ -93,6 +93,8 @@ public class LuaLoader implements JavaFunction, CoronaRuntimeListener {
                 new HideWrapper(),
                 new SetBannerPositionTopWrapper(),
                 new SetBannerPositionBottomWrapper(),
+                new SetImpressionListenerWrapper(),
+                new SetClickListenerWrapper(),
         };
         String libName = L.toString(1);
         L.register(libName, luaFunctions);
@@ -363,21 +365,6 @@ public class LuaLoader implements JavaFunction, CoronaRuntimeListener {
          */
         @Override
         public int invoke(LuaState L) {
-
-            int index = 1;
-
-            impressionListener = CoronaLua.REFNIL;
-            if (CoronaLua.isListener(L, index, EVENT_NAME)) {
-                impressionListener = CoronaLua.newRef(L, index);
-            }
-            index++;
-
-            clickListener = CoronaLua.REFNIL;
-            if (CoronaLua.isListener(L, index, EVENT_NAME)) {
-                clickListener = CoronaLua.newRef(L, index);
-            }
-            index++;
-
             return show();
         }
     }
@@ -402,6 +389,9 @@ public class LuaLoader implements JavaFunction, CoronaRuntimeListener {
         }
     }
 
+    /**
+     * Implements the pubnative.setBannerPositionTop() Lua function.
+     */
     private class SetBannerPositionTopWrapper implements NamedJavaFunction {
         /**
          * Gets the name of the Lua function as it would appear in the Lua script.
@@ -419,6 +409,9 @@ public class LuaLoader implements JavaFunction, CoronaRuntimeListener {
         }
     }
 
+    /**
+     * Implements the pubnative.setBannerPositionBottom() Lua function.
+     */
     private class SetBannerPositionBottomWrapper implements NamedJavaFunction {
         /**
          * Gets the name of the Lua function as it would appear in the Lua script.
@@ -433,6 +426,64 @@ public class LuaLoader implements JavaFunction, CoronaRuntimeListener {
         @Override
         public int invoke(LuaState L) {
             return setBannerPositionBottom();
+        }
+    }
+
+    /**
+     * Implements the pubnative.setImpressionListener() Lua function.
+     */
+    private class SetImpressionListenerWrapper implements NamedJavaFunction {
+        /**
+         * Gets the name of the Lua function as it would appear in the Lua script.
+         *
+         * @return Returns the name of the custom Lua function.
+         */
+        @Override
+        public String getName() {
+            return "setImpressionListener";
+        }
+
+        @Override
+        public int invoke(LuaState L) {
+
+            int index = 1;
+
+            impressionListener = CoronaLua.REFNIL;
+            if (CoronaLua.isListener(L, index, EVENT_NAME)) {
+                impressionListener = CoronaLua.newRef(L, index);
+            }
+            index++;
+
+            return 0;
+        }
+    }
+
+    /**
+     * Implements the pubnative.setClickListener() Lua function.
+     */
+    private class SetClickListenerWrapper implements NamedJavaFunction {
+        /**
+         * Gets the name of the Lua function as it would appear in the Lua script.
+         *
+         * @return Returns the name of the custom Lua function.
+         */
+        @Override
+        public String getName() {
+            return "setClickListener";
+        }
+
+        @Override
+        public int invoke(LuaState L) {
+
+            int index = 1;
+
+            clickListener = CoronaLua.REFNIL;
+            if (CoronaLua.isListener(L, index, EVENT_NAME)) {
+                clickListener = CoronaLua.newRef(L, index);
+            }
+            index++;
+
+            return 0;
         }
     }
 }
