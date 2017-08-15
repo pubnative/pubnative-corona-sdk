@@ -12,9 +12,6 @@ local banner = require( "plugin.pubnative.banner" )
 local APP_TOKEN = "de7a474dabc79eac1400b62bd6f6dc408f27b92a863f58db3d8584b2bd25f91c";
 local PLACEMENT = "asset_group_1";
 
--- Flag is it Ad loaded already or not
-local isReady = false;
-
 -- ------------------------------------------------------------------------------
 -- Spinner
 -- ------------------------------------------------------------------------------
@@ -56,14 +53,12 @@ local function loadListener(event)
       "Ad loading failed! Error: " .. tostring( event.response ),
       { "OK" }
     )
-    isReady = false;
   else
     native.showAlert(
       "Success",
       "Ad loaded!",
       { "OK" }
     )
-    isReady = true;
   end
 end
 
@@ -149,7 +144,6 @@ local pubnativeLoadBannerButton = widget.newButton
 {
   label = "Load Banner";
   onRelease = function(event)
-    isReady = false;
     spinner.isVisible = true;
     spinner:start();
     -- --------------------------------------------------------------------------
@@ -158,10 +152,8 @@ local pubnativeLoadBannerButton = widget.newButton
     -- 2. Placement name
     -- 3. Listener for detecting Loading behavior from Pubnative SDK
     -- --------------------------------------------------------------------------
-    if(banner ~= nil) then
-      banner.hide();
-      banner.load(APP_TOKEN, PLACEMENT, loadListener);
-    end
+    banner.hide();
+    banner.load(APP_TOKEN, PLACEMENT, loadListener);
   end,
 }
 
@@ -175,20 +167,18 @@ local pubnativeShowBannerButton = widget.newButton
     -- --------------------------------------------------------------------------
     -- For displaying banner on the screen, you should set banner position
     -- by methods setBannerPositionTop() or setBannerPositionBottom().
-    -- Set Impression Listener and Click Listener, 
+    -- Set Impression Listener and Click Listener,
     -- if you want detect impressions and clicks for the ads
     -- And then use show() method
     -- --------------------------------------------------------------------------
-    if(banner ~= nil and isReady) then
-      if(bannerTop.isOn) then
-        banner.setBannerPositionTop()
-      elseif(bannerBottom.isOn) then
-        banner.setBannerPositionBottom()
-      end
-      banner.setImpressionListener(impressionListener)
-      banner.setClickListener(clickListener)
-      banner.show()
+    if(bannerTop.isOn) then
+      banner.setBannerPositionTop()
+    elseif(bannerBottom.isOn) then
+      banner.setBannerPositionBottom()
     end
+    banner.setImpressionListener(impressionListener)
+    banner.setClickListener(clickListener)
+    banner.show()
   end,
 }
 
@@ -199,9 +189,7 @@ local pubnativeHideBannerButton = widget.newButton
 {
   label = "Hide",
   onRelease = function( event )
-    if(banner ~= nil) then
-      banner.hide()
-    end
+    banner.hide()
   end,
 }
 

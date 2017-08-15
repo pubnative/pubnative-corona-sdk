@@ -11,9 +11,6 @@ local interstitial = require( "plugin.pubnative.interstitial" )
 local APP_TOKEN = "de7a474dabc79eac1400b62bd6f6dc408f27b92a863f58db3d8584b2bd25f91c";
 local PLACEMENT = "asset_group_16";
 
--- Flag is it Ad loaded already or not
-local isReady = false;
-
 -- ------------------------------------------------------------------------------
 -- Spinner
 -- ------------------------------------------------------------------------------
@@ -55,14 +52,12 @@ local function loadListener(event)
       "Ad loading failed! Error: " .. tostring( event.response ),
       { "OK" }
     )
-    isReady = false;
   else
     native.showAlert(
       "Success",
       "Ad loaded!",
       { "OK" }
     )
-    isReady = true;
   end
 end
 
@@ -124,7 +119,6 @@ local pubnativeLoadInterstitialButton = widget.newButton
 {
   label = "Load Interstitial";
   onRelease = function(event)
-    isReady = false;
     spinner.isVisible = true;
     spinner:start();
     -- --------------------------------------------------------------------------
@@ -133,9 +127,7 @@ local pubnativeLoadInterstitialButton = widget.newButton
     -- 2. Placement name
     -- 3. Listener for detecting Loading behavior from Pubnative SDK
     -- --------------------------------------------------------------------------
-    if(interstitial ~= nil) then
-      interstitial.load(APP_TOKEN, PLACEMENT, loadListener);
-    end
+    interstitial.load(APP_TOKEN, PLACEMENT, loadListener);
   end,
 }
 
@@ -152,13 +144,11 @@ local pubnativeShowInterstitialButton = widget.newButton
     -- if you want detect impressions and clicks for the ads and
     -- set Show and Hide listeners, if you want detect when Ad is shown or Hidden
     -- --------------------------------------------------------------------------
-    if(interstitial ~= nil and isReady) then
-      interstitial.setImpressionListener(impressionListener)
-      interstitial.setClickListener(clickListener)
-      interstitial.setShowListener(showListener)
-      interstitial.setHideListener(hideListener)
-      interstitial.show()
-    end
+    interstitial.setImpressionListener(impressionListener)
+    interstitial.setClickListener(clickListener)
+    interstitial.setShowListener(showListener)
+    interstitial.setHideListener(hideListener)
+    interstitial.show()
   end,
 }
 
