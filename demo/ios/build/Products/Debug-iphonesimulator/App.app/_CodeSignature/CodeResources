@@ -150,11 +150,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		T324a3wuAarsgLu3TxEykaujIkA=
-		</data>
-		<key>LaunchImage-700-568h@2x.png</key>
-		<data>
-		jUzAVDZErJq8r4xRQMYF5Kc4BgE=
+		Jv+ajr66Yo7cMLKSaxH12+qZJn4=
 		</data>
 		<key>LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -174,11 +170,11 @@
 		</data>
 		<key>MainWindow-iPad.nib</key>
 		<data>
-		Y/C7JDTGHi1afZ1YyXSg1uyee1M=
+		1CgyMWmIxYj5y2cRoduyBFgdHcI=
 		</data>
 		<key>MainWindow.nib</key>
 		<data>
-		991JUXm/bSSu8DuyjxYEQAftCT0=
+		eAQNO07bWwh6rnzMqAMEdUnXwlA=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -624,17 +620,6 @@
 			zzGhLLW7Pd8nfPBboSmjBwL/IKCnuuwOmGc3BHW0B44=
 			</data>
 		</dict>
-		<key>LaunchImage-700-568h@2x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			jUzAVDZErJq8r4xRQMYF5Kc4BgE=
-			</data>
-			<key>hash2</key>
-			<data>
-			zk4M8Nt4RUdrZyscD2Fls3DuhrSZpwnGFwXIWTdHmrw=
-			</data>
-		</dict>
 		<key>LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash</key>
@@ -683,22 +668,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Y/C7JDTGHi1afZ1YyXSg1uyee1M=
+			1CgyMWmIxYj5y2cRoduyBFgdHcI=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZfX38e1DZcuCFiYxSuaxKU9XI/8TtHm1BUzX/aOMQFE=
+			BNlOQ7iqH+0PBhmq+Jb5JBjUcGYgjd4Ho3HVMuJjzl4=
 			</data>
 		</dict>
 		<key>MainWindow.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			991JUXm/bSSu8DuyjxYEQAftCT0=
+			eAQNO07bWwh6rnzMqAMEdUnXwlA=
 			</data>
 			<key>hash2</key>
 			<data>
-			xfJ5Qbp+92+VJqyKW9FL4dB50jBj5MlIhw/O8wo9NQQ=
+			BNagXnXdc1iNNDCiyQQ/yDt2eVWp72TT6htB+Mw0Jsk=
 			</data>
 		</dict>
 		<key>_CoronaSplashScreen.png</key>
