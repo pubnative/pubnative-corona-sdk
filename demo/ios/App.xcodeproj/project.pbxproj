@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		5AD816591FB0B1CB009D0BF0 /* Pubnative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD816581FB0B1CB009D0BF0 /* Pubnative.framework */; };
+		5AD8165A1FB0B1CB009D0BF0 /* Pubnative.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD816581FB0B1CB009D0BF0 /* Pubnative.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A447B610165D72FB009EA762 /* AppCoronaDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = A447B60F165D72FB009EA762 /* AppCoronaDelegate.mm */; };
 		A447B6671666FD02009EA762 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A447B6641666FD02009EA762 /* MainWindow-iPad.xib */; };
 		A447B6681666FD02009EA762 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A447B6651666FD02009EA762 /* MainWindow.xib */; };
@@ -85,7 +87,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5AD8165B1FB0B1CB009D0BF0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5AD8165A1FB0B1CB009D0BF0 /* Pubnative.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		5AD816581FB0B1CB009D0BF0 /* Pubnative.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pubnative.framework; sourceTree = "<group>"; };
 		A447B60E165D72FB009EA762 /* AppCoronaDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppCoronaDelegate.h; sourceTree = SOURCE_ROOT; };
 		A447B60F165D72FB009EA762 /* AppCoronaDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppCoronaDelegate.mm; sourceTree = SOURCE_ROOT; };
 		A447B6641666FD02009EA762 /* MainWindow-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "MainWindow-iPad.xib"; path = "Corona/ios/resource/MainWindow-iPad.xib"; sourceTree = "<group>"; };
@@ -176,6 +193,7 @@
 				A484118515128D5D0074BD57 /* MobileCoreServices.framework in Frameworks */,
 				A484118615128D5D0074BD57 /* OpenAL.framework in Frameworks */,
 				A484112615114F700074BD57 /* OpenGLES.framework in Frameworks */,
+				5AD816591FB0B1CB009D0BF0 /* Pubnative.framework in Frameworks */,
 				A484118715128D5D0074BD57 /* QuartzCore.framework in Frameworks */,
 				A484118815128D5D0074BD57 /* Security.framework in Frameworks */,
 				A484118915128D5D0074BD57 /* StoreKit.framework in Frameworks */,
@@ -211,6 +229,7 @@
 		A484110E15114F700074BD57 = {
 			isa = PBXGroup;
 			children = (
+				5AD816581FB0B1CB009D0BF0 /* Pubnative.framework */,
 				A4E253DA166DE7C800DCDC2C /* Plugin.xcodeproj */,
 				A484112715114F700074BD57 /* App */,
 				A447B823166856C7009EA762 /* Corona */,
@@ -320,6 +339,7 @@
 				A484118B15128E320074BD57 /* build.settings to Info.plist */,
 				A484118F1512906B0074BD57 /* Certify Corona Build */,
 				A484119015129A930074BD57 /* Touch main.mm to ensure build */,
+				5AD8165B1FB0B1CB009D0BF0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -615,11 +635,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = J6V7N93E53;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Prefix.pch;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = "App-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mycompany.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SEPARATE_STRIP = YES;
@@ -636,11 +661,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = J6V7N93E53;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_OPTIMIZATION_LEVEL = 2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = "App-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mycompany.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SEPARATE_STRIP = YES;
