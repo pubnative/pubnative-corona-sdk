@@ -62,6 +62,7 @@
 		E640B2F21BFC00B00031FAE9 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E640B2F11BFC00B00031FAE9 /* AssetsLibrary.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E640B2F41BFC00BA0031FAE9 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E640B2F31BFC00BA0031FAE9 /* Photos.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F51C66D61EE0D3B20040E4BE /* libplugin_library.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E253E2166DE7C800DCDC2C /* libplugin_library.a */; };
+		F56457D91FA108F500EC8C29 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F56712391F73451B006B502D /* Images.xcassets */; };
 		F5BB41531BC42ACF0033F6FA /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5BB41521BC42ACF0033F6FA /* CoreText.framework */; };
 		F5C9F4811ED39AD100D34A2D /* _CoronaSplashScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = C277D3B51EBB9F8E00966BA1 /* _CoronaSplashScreen.png */; };
 		F5E548091BE7FF0200091810 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5E548081BE7FF0200091810 /* GameController.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -135,6 +136,7 @@
 		F54A40BD1EE07F9100AF417D /* build.settings */ = {isa = PBXFileReference; lastKnownFileType = text; name = build.settings; path = ../Corona/build.settings; sourceTree = "<group>"; };
 		F54A40BE1EE07F9100AF417D /* config.lua */ = {isa = PBXFileReference; lastKnownFileType = text; name = config.lua; path = ../Corona/config.lua; sourceTree = "<group>"; };
 		F55829801ED23E1200E5808C /* CoronaApp.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = CoronaApp.xcconfig; sourceTree = "<group>"; };
+		F56712391F73451B006B502D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Corona/Images.xcassets; sourceTree = "<group>"; };
 		F572F8191EE06E45001BC814 /* CoronaNative.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CoronaNative.xcconfig; sourceTree = "<group>"; };
 		F5BB41521BC42ACF0033F6FA /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		F5E548081BE7FF0200091810 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
@@ -270,6 +272,7 @@
 		A484112715114F700074BD57 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				F56712391F73451B006B502D /* Images.xcassets */,
 				C277D3B51EBB9F8E00966BA1 /* _CoronaSplashScreen.png */,
 				A484112915114F700074BD57 /* App-Info.plist */,
 				A484112A15114F700074BD57 /* InfoPlist.strings */,
@@ -383,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A484112C15114F700074BD57 /* InfoPlist.strings in Resources */,
+				F56457D91FA108F500EC8C29 /* Images.xcassets in Resources */,
 				A447B6671666FD02009EA762 /* MainWindow-iPad.xib in Resources */,
 				A447B6681666FD02009EA762 /* MainWindow.xib in Resources */,
 				F5C9F4811ED39AD100D34A2D /* _CoronaSplashScreen.png in Resources */,
@@ -605,6 +609,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F55829801ED23E1200E5808C /* CoronaApp.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -625,6 +631,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F55829801ED23E1200E5808C /* CoronaApp.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = "";
 				GCC_OPTIMIZATION_LEVEL = 2;
