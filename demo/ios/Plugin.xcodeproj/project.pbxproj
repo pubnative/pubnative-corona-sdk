@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5AD816611FB0BD9D009D0BF0 /* PNBannerWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD8165F1FB0BD9D009D0BF0 /* PNBannerWrapper.m */; };
+		5AD816621FB0BD9D009D0BF0 /* PNAdWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD816601FB0BD9D009D0BF0 /* PNAdWrapper.m */; };
 		A4E253C9166D716900DCDC2C /* PluginLibrary.mm in Sources */ = {isa = PBXBuildFile; fileRef = A447B617165D734C009EA762 /* PluginLibrary.mm */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +25,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5AD8165D1FB0BD9C009D0BF0 /* PNAdWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNAdWrapper.h; sourceTree = "<group>"; };
+		5AD8165E1FB0BD9D009D0BF0 /* PNBannerWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNBannerWrapper.h; sourceTree = "<group>"; };
+		5AD8165F1FB0BD9D009D0BF0 /* PNBannerWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNBannerWrapper.m; sourceTree = "<group>"; };
+		5AD816601FB0BD9D009D0BF0 /* PNAdWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNAdWrapper.m; sourceTree = "<group>"; };
 		A447B616165D734C009EA762 /* PluginLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PluginLibrary.h; path = Plugin/PluginLibrary.h; sourceTree = "<group>"; };
 		A447B617165D734C009EA762 /* PluginLibrary.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PluginLibrary.mm; path = Plugin/PluginLibrary.mm; sourceTree = "<group>"; };
 		A4E253B6166D6FB300DCDC2C /* libplugin_library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libplugin_library.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +49,10 @@
 		A447B609165D72A6009EA762 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				5AD8165D1FB0BD9C009D0BF0 /* PNAdWrapper.h */,
+				5AD816601FB0BD9D009D0BF0 /* PNAdWrapper.m */,
+				5AD8165E1FB0BD9D009D0BF0 /* PNBannerWrapper.h */,
+				5AD8165F1FB0BD9D009D0BF0 /* PNBannerWrapper.m */,
 				A447B616165D734C009EA762 /* PluginLibrary.h */,
 				A447B617165D734C009EA762 /* PluginLibrary.mm */,
 			);
@@ -144,6 +154,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4E253C9166D716900DCDC2C /* PluginLibrary.mm in Sources */,
+				5AD816611FB0BD9D009D0BF0 /* PNBannerWrapper.m in Sources */,
+				5AD816621FB0BD9D009D0BF0 /* PNAdWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +246,7 @@
 		A4E253C0166D6FB300DCDC2C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DSTROOT = /tmp/plugin_library.dst;
@@ -253,6 +266,7 @@
 		A4E253C1166D6FB300DCDC2C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DSTROOT = /tmp/plugin_library.dst;

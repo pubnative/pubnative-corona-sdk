@@ -11,6 +11,7 @@
 #import <UIKit/UIKit.h>
 
 #import <Pubnative/Pubnative.h>
+#import "PNBannerWrapper.h"
 
 // ----------------------------------------------------------------------------
 
@@ -39,9 +40,6 @@ protected:
     static int Finalizer( lua_State *L );
     
 private:
-//    static void loadBanner( lua_State *L, NSString *appToken, NSString *placement, NSString *bannerID );
-
-    
     CoronaLuaRef fListener;
 };
 
@@ -137,10 +135,9 @@ PluginLibrary::init( lua_State *L )
 }
 
 int PluginLibrary::load( lua_State *L )
-{
-    const char *appToken = lua_tostring(L, 1);
-    const char *placement = lua_tostring(L, 2);
-
+{    
+    PNBannerWrapper *bannerWrapper = [[PNBannerWrapper alloc] init];
+    [bannerWrapper loadWithLuaState:L withAppToken:[NSString stringWithUTF8String:lua_tostring(L, 1)] withPlacement:[NSString stringWithUTF8String:lua_tostring(L, 2)]];
     return 0;
 }
 

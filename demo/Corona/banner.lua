@@ -8,9 +8,9 @@ composer.recycleOnSceneChange = true
 -- Pubnative Banner Plugin
 local banner = require( "plugin.pubnative.banner" )
 
--- Parameters for Pubnative Interstitial
-local APP_TOKEN = "de7a474dabc79eac1400b62bd6f6dc408f27b92a863f58db3d8584b2bd25f91c";
-local PLACEMENT = "asset_group_1";
+-- Parameters for Pubnative Banner
+local APP_TOKEN = "2c6fdfd723dd4a6ba52e8e6878138145";
+local PLACEMENT = "iOS_asset_group_";
 
 -- ------------------------------------------------------------------------------
 -- Spinner
