@@ -8,30 +8,39 @@
 
 #import "PNAdWrapper.h"
 
+NSString * const kCoronaEventName = @"pubnativeBanner";
+
 @implementation PNAdWrapper
 
 - (void)layoutDidFinishLoading:(PNLayout *)layout
 {
-    CoronaLuaNewEvent(self.luaState, [@"pubnativeBanner" UTF8String]);
-    CoronaLuaDispatchEvent(self.luaState, self.loadListener, 0);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        CoronaLuaNewEvent(self.luaState, [kCoronaEventName UTF8String]);
+        CoronaLuaDispatchEvent(self.luaState, self.loadListener, 0);
+    });
 }
 
 - (void)layout:(PNLayout *)layout didFailLoading:(NSError *)error
 {
-    CoronaLuaNewEvent(self.luaState, [@"pubnativeBanner" UTF8String]);
-    CoronaLuaDispatchEvent(self.luaState, self.loadListener, 0);
-}
+    dispatch_async(dispatch_get_main_queue(), ^{
+        CoronaLuaNewEvent(self.luaState, [kCoronaEventName UTF8String]);
+        CoronaLuaDispatchEvent(self.luaState, self.loadListener, 0);
+    });}
 
 - (void)layoutTrackImpression:(PNLayout *)layout
 {
-    CoronaLuaNewEvent(self.luaState, [@"pubnativeBanner" UTF8String]);
-   // CoronaLuaDispatchEvent(self.luaState, self.impressionListener, 0);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        CoronaLuaNewEvent(self.luaState, [kCoronaEventName UTF8String]);
+        CoronaLuaDispatchEvent(self.luaState, self.impressionListener, 0);
+    });
 }
 
 - (void)layoutTrackClick:(PNLayout *)layout
 {
-    CoronaLuaNewEvent(self.luaState, [@"pubnativeBanner" UTF8String]);
-   // CoronaLuaDispatchEvent(self.luaState, self.clickListener, 0);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        CoronaLuaNewEvent(self.luaState, [kCoronaEventName UTF8String]);
+        CoronaLuaDispatchEvent(self.luaState, self.clickListener, 0);
+    });
 
 }
 

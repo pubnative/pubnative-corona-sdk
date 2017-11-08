@@ -17,5 +17,4 @@
 @property (nonatomic, assign) CoronaLuaRef impressionListener;
 @property (nonatomic, assign) CoronaLuaRef clickListener;
 
-
 @end

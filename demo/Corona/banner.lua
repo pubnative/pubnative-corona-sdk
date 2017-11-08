@@ -10,7 +10,7 @@ local banner = require( "plugin.pubnative.banner" )
 
 -- Parameters for Pubnative Banner
 local APP_TOKEN = "2c6fdfd723dd4a6ba52e8e6878138145";
-local PLACEMENT = "iOS_asset_group_";
+local PLACEMENT = "iOS_asset_group_1";
 
 -- ------------------------------------------------------------------------------
 -- Spinner
