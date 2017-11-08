@@ -346,11 +346,11 @@
 		</data>
 		<key>MainWindow-iPad.nib</key>
 		<data>
-		M15e02MteeRrpwLV8YXr7QfK0kg=
+		cxCoKG7bbpOr3/GYz3kTQTFscX0=
 		</data>
 		<key>MainWindow.nib</key>
 		<data>
-		6kHfq9pLP5J+mWzbOd83uSA9xbc=
+		jFBo2xyzcA5wx/WMS4ytzQ3sgVw=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -362,7 +362,7 @@
 		</data>
 		<key>banner.lu</key>
 		<data>
-		P32g9gTac+Wd/XrripN+wiycjjw=
+		CIJ3bQ4TIy5Lbd44QUWZu7DRlgM=
 		</data>
 		<key>config.lu</key>
 		<data>
@@ -391,7 +391,7 @@
 		</data>
 		<key>resource.corona-archive</key>
 		<data>
-		iR0bbY86E5ItBeEhVXlgu+/fOYU=
+		dEpKe9Rwf/L8RnpnEAy+0i8Dskw=
 		</data>
 		<key>spinner.png</key>
 		<data>
@@ -1328,22 +1328,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			M15e02MteeRrpwLV8YXr7QfK0kg=
+			cxCoKG7bbpOr3/GYz3kTQTFscX0=
 			</data>
 			<key>hash2</key>
 			<data>
-			dxGOVYxVK7pSUSoFH+9PUct8B5p2bIZMaO0XsdS1y3M=
+			Ykh/ihE1R1jOiEfiToMXc1JvK84B+j4MRH+MCgqLc2w=
 			</data>
 		</dict>
 		<key>MainWindow.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			6kHfq9pLP5J+mWzbOd83uSA9xbc=
+			jFBo2xyzcA5wx/WMS4ytzQ3sgVw=
 			</data>
 			<key>hash2</key>
 			<data>
-			6TJZsI0cr8CATZVpcrDCd52EmJl3pClrZy0hFyvr0Ew=
+			SLW3a/sPJyGwyXVNhmp7ibQ6pHOqP2YIP6bnbNSGa+4=
 			</data>
 		</dict>
 		<key>_CoronaSplashScreen.png</key>
@@ -1361,11 +1361,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			P32g9gTac+Wd/XrripN+wiycjjw=
+			CIJ3bQ4TIy5Lbd44QUWZu7DRlgM=
 			</data>
 			<key>hash2</key>
 			<data>
-			of3umldpWnoHCv7EJrzdEwO2ozMGUjqXuBpsuuKZy9E=
+			IfiVjdixPLgkSV40wM9Rtw+Qpcc/wriTVmuWDI9oB5E=
 			</data>
 		</dict>
 		<key>config.lu</key>
@@ -1429,11 +1429,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			iR0bbY86E5ItBeEhVXlgu+/fOYU=
+			dEpKe9Rwf/L8RnpnEAy+0i8Dskw=
 			</data>
 			<key>hash2</key>
 			<data>
-			DOoz+K0ifFMF3W3pLkK6T91j0+o4sFFQ898dsBqjLJM=
+			8e1zCa+7nQCmSFDkRlceFYCI4TMZ7JQIJEjdylUuAzw=
 			</data>
 		</dict>
 		<key>spinner.png</key>
