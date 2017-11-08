@@ -74,7 +74,7 @@ const char PluginLibrary::kName[] = "plugin.pubnative.banner";
 const char PluginLibrary::kEvent[] = "pubnativeBanner";
 
 PluginLibrary::PluginLibrary()
-:	fListener( NULL )
+:	fListener( NULL ), loadListener( NULL ), impressionListener( NULL ), clickListener( NULL )
 {
 }
 
