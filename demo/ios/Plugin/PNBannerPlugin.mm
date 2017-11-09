@@ -1,15 +1,13 @@
 //
 //  PNBannerPlugin.mm
 //
-//
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by Can Soykarafakili on 06.11.17.
+//  Copyright © 2017 Can Soykarafakili. All rights reserved.
 //
 
 #import "PNBannerPlugin.h"
-
 #include <CoronaRuntime.h>
 #import <UIKit/UIKit.h>
-
 #import <Pubnative/Pubnative.h>
 #import "PNBannerWrapper.h"
 
@@ -40,8 +38,6 @@ public:
     static int init(lua_State *L);
     static int load(lua_State *L);
     static int show(lua_State *L);
-    static int setBannerPositionTop(lua_State *L);
-    static int setBannerPositionBottom(lua_State *L);
     static int setImpressionListener(lua_State *L);
     static int setClickListener(lua_State *L);
     static int hide(lua_State *L);
@@ -58,8 +54,6 @@ private:
     
     void loadBanner(lua_State *L);
     void showBanner(lua_State *L);
-    void setBannerPositionToTop(lua_State *L);
-    void setBannerPositionToBottom(lua_State *L);
     void setBannerImpressionListener(lua_State *L);
     void setBannerClickListener(lua_State *L);
     void hideBanner(lua_State *L);
@@ -130,8 +124,6 @@ int PNBannerPlugin::Open(lua_State *L)
         {"init", init},
         {"load", load},
         {"show", show},
-        {"setBannerPositionTop", setBannerPositionTop},
-        {"setBannerPositionBottom", setBannerPositionBottom},
         {"setImpressionListener", setImpressionListener},
         {"setClickListener", setClickListener},
         {"hide", hide},
@@ -149,6 +141,9 @@ int PNBannerPlugin::Finalizer(lua_State *L)
 {
     Self *library = (Self *)CoronaLuaToUserdata(L, 1);
     CoronaLuaDeleteRef(L, library->GetListener());
+    CoronaLuaDeleteRef(L, library->GetLoadListener());
+    CoronaLuaDeleteRef(L, library->GetImpressionListener());
+    CoronaLuaDeleteRef(L, library->GetClickListener());
     delete library;
     return 0;
 }
@@ -184,20 +179,6 @@ int PNBannerPlugin::show(lua_State *L)
 {
     PNBannerPlugin PNBannerPlugin;
     PNBannerPlugin.showBanner(L);
-    return 0;
-}
-
-int PNBannerPlugin::setBannerPositionTop(lua_State *L)
-{
-    PNBannerPlugin PNBannerPlugin;
-    PNBannerPlugin.setBannerPositionToTop(L);
-    return 0;
-}
-
-int PNBannerPlugin::setBannerPositionBottom(lua_State *L)
-{
-    PNBannerPlugin PNBannerPlugin;
-    PNBannerPlugin.setBannerPositionToBottom(L);
     return 0;
 }
 
@@ -240,17 +221,7 @@ void PNBannerPlugin::loadBanner(lua_State *L)
 
 void PNBannerPlugin::showBanner(lua_State *L)
 {
-    [bannerWrapper show];
-}
-
-void PNBannerPlugin::setBannerPositionToTop(lua_State *L)
-{
-    [bannerWrapper setBannerPositionToTop];
-}
-
-void PNBannerPlugin::setBannerPositionToBottom(lua_State *L)
-{
-    [bannerWrapper setBannerPositionToBottom];
+    [bannerWrapper showWithPosition:(NSInteger)lua_tointeger(L, 1)];
 }
 
 void PNBannerPlugin::setBannerImpressionListener(lua_State *L)

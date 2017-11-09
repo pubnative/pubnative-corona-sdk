@@ -1,8 +1,8 @@
 //
 //  PNBannerPlugin.h
 //  
-//
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by Can Soykarafakili on 06.11.17.
+//  Copyright © 2017 Can Soykarafakili. All rights reserved.
 //
 
 #ifndef _PNBannerPlugin_H__

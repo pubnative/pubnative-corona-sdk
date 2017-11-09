@@ -12,12 +12,10 @@
 @interface PNBannerWrapper : PNAdWrapper
 
 @property(nonatomic, strong) PNBanner *banner;
-@property(nonatomic, assign) PNBannerPosition bannerPosition;
 
 - (void)loadWithLuaState:(lua_State *)lua_State withAppToken:(NSString*)appToken withPlacement:(NSString*)placement withListener:(CoronaLuaRef)loadListener;
-- (void)show;
+- (void)showWithPosition:(NSInteger)position;
 - (void)hide;
-- (void)setBannerPositionToTop;
-- (void)setBannerPositionToBottom;
-
+- (NSInteger)topPosition;
+- (NSInteger)bottomPosition;
 @end

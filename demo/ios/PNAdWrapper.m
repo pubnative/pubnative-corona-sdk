@@ -25,7 +25,9 @@ NSString * const kCoronaEventName = @"pubnativeBanner";
     dispatch_async(dispatch_get_main_queue(), ^{
         CoronaLuaNewEvent(self.luaState, [kCoronaEventName UTF8String]);
         CoronaLuaDispatchEvent(self.luaState, self.loadListener, 0);
-    });}
+    });
+    
+}
 
 - (void)layoutTrackImpression:(PNLayout *)layout
 {

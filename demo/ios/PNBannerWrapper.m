@@ -20,7 +20,6 @@
     self = [super init];
     if (self) {
         self.banner = [[PNBanner alloc] init];
-        self.bannerPosition = BANNER_POSITION_BOTTOM;
     }
     return self;
 }
@@ -32,20 +31,24 @@
     [self.banner loadWithAppToken:appToken placement:placement delegate:self];
 }
 
-- (void)show
+- (void)showWithPosition:(NSInteger)position
 {
     self.banner.trackDelegate = self;
-    [self.banner showWithPosition:self.bannerPosition];
+    if (position == [self topPosition]) {
+        [self.banner showWithPosition:BANNER_POSITION_TOP];
+    } else if (position == [self bottomPosition]) {
+        [self.banner showWithPosition:BANNER_POSITION_BOTTOM];
+    }
 }
 
-- (void)setBannerPositionToTop
+- (NSInteger)topPosition
 {
-    self.bannerPosition = BANNER_POSITION_TOP;
+    return 1;
 }
 
-- (void)setBannerPositionToBottom
+- (NSInteger)bottomPosition
 {
-    self.bannerPosition = BANNER_POSITION_BOTTOM;
+    return 2;
 }
 
 - (void)hide
