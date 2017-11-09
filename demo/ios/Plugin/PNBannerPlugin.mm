@@ -22,6 +22,7 @@ public:
 
     static const char kName[];
     static const char kEvent[];
+    static PNBannerPlugin bannerPlugin;
     
     bool Initialize(CoronaLuaRef listener);
     bool InitializeLoadListener(CoronaLuaRef listener);
@@ -67,6 +68,8 @@ const char PNBannerPlugin::kName[] = "plugin.pubnative.banner";
 // This corresponds to the event name, e.g. [Lua] event.name
 const char PNBannerPlugin::kEvent[] = "pubnativeBanner";
 
+PNBannerPlugin PNBannerPlugin::bannerPlugin;
+
 PNBannerPlugin::PNBannerPlugin() : fListener(NULL), loadListener(NULL), impressionListener(NULL), clickListener(NULL)
 {
     
@@ -75,8 +78,7 @@ PNBannerPlugin::PNBannerPlugin() : fListener(NULL), loadListener(NULL), impressi
 bool PNBannerPlugin::Initialize(CoronaLuaRef listener)
 {
     bool result = (NULL == fListener);
-    if (result)
-    {
+    if (result) {
         fListener = listener;
     }
     return result;
@@ -85,8 +87,7 @@ bool PNBannerPlugin::Initialize(CoronaLuaRef listener)
 bool PNBannerPlugin::InitializeLoadListener(CoronaLuaRef listener)
 {
     bool result = (NULL == loadListener);
-    if (result)
-    {
+    if (result) {
         loadListener = listener;
     }
     return result;
@@ -95,8 +96,7 @@ bool PNBannerPlugin::InitializeLoadListener(CoronaLuaRef listener)
 bool PNBannerPlugin::InitializeImpressionListener(CoronaLuaRef listener)
 {
     bool result = (NULL == impressionListener);
-    if (result)
-    {
+    if (result) {
         impressionListener = listener;
     }
     return result;
@@ -105,8 +105,7 @@ bool PNBannerPlugin::InitializeImpressionListener(CoronaLuaRef listener)
 bool PNBannerPlugin::InitializeClickListener(CoronaLuaRef listener)
 {
     bool result = (NULL == clickListener);
-    if (result)
-    {
+    if (result) {
         clickListener = listener;
     }
     return result;
@@ -119,8 +118,7 @@ int PNBannerPlugin::Open(lua_State *L)
     CoronaLuaInitializeGCMetatable(L, kMetatableName, Finalizer);
     
     // Functions in library
-    const luaL_Reg kVTable[] =
-    {
+    const luaL_Reg kVTable[] = {
         {"init", init},
         {"load", load},
         {"show", show},
@@ -159,8 +157,7 @@ PNBannerPlugin * PNBannerPlugin::ToLibrary(lua_State *L)
 int PNBannerPlugin::init(lua_State *L)
 {
     int listenerIndex = 1;
-    if (CoronaLuaIsListener(L, listenerIndex, kEvent))
-    {
+    if (CoronaLuaIsListener(L, listenerIndex, kEvent)) {
         Self *library = ToLibrary(L);
         CoronaLuaRef listener = CoronaLuaNewRef(L, listenerIndex);
         library->Initialize(listener);
@@ -170,36 +167,31 @@ int PNBannerPlugin::init(lua_State *L)
 
 int PNBannerPlugin::load(lua_State *L)
 {
-    PNBannerPlugin PNBannerPlugin;
-    PNBannerPlugin.loadBanner(L);
+    bannerPlugin.loadBanner(L);
     return 0;
 }
 
 int PNBannerPlugin::show(lua_State *L)
 {
-    PNBannerPlugin PNBannerPlugin;
-    PNBannerPlugin.showBanner(L);
+    bannerPlugin.showBanner(L);
     return 0;
 }
 
 int PNBannerPlugin:: hide(lua_State *L)
 {
-    PNBannerPlugin PNBannerPlugin;
-    PNBannerPlugin.hideBanner(L);
+    bannerPlugin.hideBanner(L);
     return 0;
 }
 
 int PNBannerPlugin::setImpressionListener(lua_State *L)
 {
-    PNBannerPlugin PNBannerPlugin;
-    PNBannerPlugin.setBannerImpressionListener(L);
+    bannerPlugin.setBannerImpressionListener(L);
     return 0;
 }
 
 int PNBannerPlugin::setClickListener(lua_State *L)
 {
-    PNBannerPlugin PNBannerPlugin;
-    PNBannerPlugin.setBannerClickListener(L);
+    bannerPlugin.setBannerClickListener(L);
     return 0;
 }
 
@@ -207,8 +199,7 @@ void PNBannerPlugin::loadBanner(lua_State *L)
 {
     bannerWrapper = [[PNBannerWrapper alloc] init];
     
-    if (CoronaLuaIsListener(L, 3, kEvent))
-    {
+    if (CoronaLuaIsListener(L, 3, kEvent)) {
         Self *library = ToLibrary(L);
         loadListener = CoronaLuaNewRef(L, 3);
         library->InitializeLoadListener(loadListener);
@@ -226,8 +217,7 @@ void PNBannerPlugin::showBanner(lua_State *L)
 
 void PNBannerPlugin::setBannerImpressionListener(lua_State *L)
 {
-    if (CoronaLuaIsListener(L, 1, kEvent))
-    {
+    if (CoronaLuaIsListener(L, 1, kEvent)) {
         Self *library = ToLibrary(L);
         impressionListener = CoronaLuaNewRef(L, 1);
         library->InitializeImpressionListener(impressionListener);
@@ -237,8 +227,7 @@ void PNBannerPlugin::setBannerImpressionListener(lua_State *L)
 
 void PNBannerPlugin::setBannerClickListener(lua_State *L)
 {
-    if (CoronaLuaIsListener(L, 1, kEvent))
-    {
+    if (CoronaLuaIsListener(L, 1, kEvent)) {
         Self *library = ToLibrary(L);
         clickListener = CoronaLuaNewRef(L, 1);
         library->InitializeClickListener(clickListener);
