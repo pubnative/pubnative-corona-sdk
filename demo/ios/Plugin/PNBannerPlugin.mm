@@ -1,11 +1,11 @@
 //
-//  PluginLibrary.mm
-//  TemplateApp
+//  PNBannerPlugin.mm
+//
 //
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "PluginLibrary.h"
+#import "PNBannerPlugin.h"
 
 #include <CoronaRuntime.h>
 #import <UIKit/UIKit.h>
@@ -17,10 +17,10 @@
 
 PNBannerWrapper *bannerWrapper;
 
-class PluginLibrary
+class PNBannerPlugin
 {
 public:
-    typedef PluginLibrary Self;
+    typedef PNBannerPlugin Self;
 
     static const char kName[];
     static const char kEvent[];
@@ -47,7 +47,7 @@ public:
     static int hide(lua_State *L);
     
 protected:
-    PluginLibrary();
+    PNBannerPlugin();
     static int Finalizer(lua_State *L);
     
 private:
@@ -68,17 +68,17 @@ private:
 // ----------------------------------------------------------------------------
 
 // This corresponds to the name of the library, e.g. [Lua] require "plugin.pubnative.banner"
-const char PluginLibrary::kName[] = "plugin.pubnative.banner";
+const char PNBannerPlugin::kName[] = "plugin.pubnative.banner";
 
 // This corresponds to the event name, e.g. [Lua] event.name
-const char PluginLibrary::kEvent[] = "pubnativeBanner";
+const char PNBannerPlugin::kEvent[] = "pubnativeBanner";
 
-PluginLibrary::PluginLibrary() : fListener(NULL), loadListener(NULL), impressionListener(NULL), clickListener(NULL)
+PNBannerPlugin::PNBannerPlugin() : fListener(NULL), loadListener(NULL), impressionListener(NULL), clickListener(NULL)
 {
     
 }
 
-bool PluginLibrary::Initialize(CoronaLuaRef listener)
+bool PNBannerPlugin::Initialize(CoronaLuaRef listener)
 {
     bool result = (NULL == fListener);
     if (result)
@@ -88,7 +88,7 @@ bool PluginLibrary::Initialize(CoronaLuaRef listener)
     return result;
 }
 
-bool PluginLibrary::InitializeLoadListener(CoronaLuaRef listener)
+bool PNBannerPlugin::InitializeLoadListener(CoronaLuaRef listener)
 {
     bool result = (NULL == loadListener);
     if (result)
@@ -98,7 +98,7 @@ bool PluginLibrary::InitializeLoadListener(CoronaLuaRef listener)
     return result;
 }
 
-bool PluginLibrary::InitializeImpressionListener(CoronaLuaRef listener)
+bool PNBannerPlugin::InitializeImpressionListener(CoronaLuaRef listener)
 {
     bool result = (NULL == impressionListener);
     if (result)
@@ -108,7 +108,7 @@ bool PluginLibrary::InitializeImpressionListener(CoronaLuaRef listener)
     return result;
 }
 
-bool PluginLibrary::InitializeClickListener(CoronaLuaRef listener)
+bool PNBannerPlugin::InitializeClickListener(CoronaLuaRef listener)
 {
     bool result = (NULL == clickListener);
     if (result)
@@ -118,7 +118,7 @@ bool PluginLibrary::InitializeClickListener(CoronaLuaRef listener)
     return result;
 }
 
-int PluginLibrary::Open(lua_State *L)
+int PNBannerPlugin::Open(lua_State *L)
 {
     // Register __gc callback
     const char kMetatableName[] = __FILE__; // Globally unique string to prevent collision
@@ -145,7 +145,7 @@ int PluginLibrary::Open(lua_State *L)
     return 1;
 }
 
-int PluginLibrary::Finalizer(lua_State *L)
+int PNBannerPlugin::Finalizer(lua_State *L)
 {
     Self *library = (Self *)CoronaLuaToUserdata(L, 1);
     CoronaLuaDeleteRef(L, library->GetListener());
@@ -153,7 +153,7 @@ int PluginLibrary::Finalizer(lua_State *L)
     return 0;
 }
 
-PluginLibrary * PluginLibrary::ToLibrary(lua_State *L)
+PNBannerPlugin * PNBannerPlugin::ToLibrary(lua_State *L)
 {
     // library is pushed as part of the closure
     Self *library = (Self *)CoronaLuaToUserdata(L, lua_upvalueindex(1));
@@ -161,7 +161,7 @@ PluginLibrary * PluginLibrary::ToLibrary(lua_State *L)
 }
 
 // [Lua] library.init(listener)
-int PluginLibrary::init(lua_State *L)
+int PNBannerPlugin::init(lua_State *L)
 {
     int listenerIndex = 1;
     if (CoronaLuaIsListener(L, listenerIndex, kEvent))
@@ -173,56 +173,56 @@ int PluginLibrary::init(lua_State *L)
     return 0;
 }
 
-int PluginLibrary::load(lua_State *L)
+int PNBannerPlugin::load(lua_State *L)
 {
-    PluginLibrary bannerPlugin;
-    bannerPlugin.loadBanner(L);
+    PNBannerPlugin PNBannerPlugin;
+    PNBannerPlugin.loadBanner(L);
     return 0;
 }
 
-int PluginLibrary::show(lua_State *L)
+int PNBannerPlugin::show(lua_State *L)
 {
-    PluginLibrary bannerPlugin;
-    bannerPlugin.showBanner(L);
+    PNBannerPlugin PNBannerPlugin;
+    PNBannerPlugin.showBanner(L);
     return 0;
 }
 
-int PluginLibrary::setBannerPositionTop(lua_State *L)
+int PNBannerPlugin::setBannerPositionTop(lua_State *L)
 {
-    PluginLibrary bannerPlugin;
-    bannerPlugin.setBannerPositionToTop(L);
+    PNBannerPlugin PNBannerPlugin;
+    PNBannerPlugin.setBannerPositionToTop(L);
     return 0;
 }
 
-int PluginLibrary::setBannerPositionBottom(lua_State *L)
+int PNBannerPlugin::setBannerPositionBottom(lua_State *L)
 {
-    PluginLibrary bannerPlugin;
-    bannerPlugin.setBannerPositionToBottom(L);
+    PNBannerPlugin PNBannerPlugin;
+    PNBannerPlugin.setBannerPositionToBottom(L);
     return 0;
 }
 
-int PluginLibrary:: hide(lua_State *L)
+int PNBannerPlugin:: hide(lua_State *L)
 {
-    PluginLibrary bannerPlugin;
-    bannerPlugin.hideBanner(L);
+    PNBannerPlugin PNBannerPlugin;
+    PNBannerPlugin.hideBanner(L);
     return 0;
 }
 
-int PluginLibrary::setImpressionListener(lua_State *L)
+int PNBannerPlugin::setImpressionListener(lua_State *L)
 {
-    PluginLibrary bannerPlugin;
-    bannerPlugin.setBannerImpressionListener(L);
+    PNBannerPlugin PNBannerPlugin;
+    PNBannerPlugin.setBannerImpressionListener(L);
     return 0;
 }
 
-int PluginLibrary::setClickListener(lua_State *L)
+int PNBannerPlugin::setClickListener(lua_State *L)
 {
-    PluginLibrary bannerPlugin;
-    bannerPlugin.setBannerClickListener(L);
+    PNBannerPlugin PNBannerPlugin;
+    PNBannerPlugin.setBannerClickListener(L);
     return 0;
 }
 
-void PluginLibrary::loadBanner(lua_State *L)
+void PNBannerPlugin::loadBanner(lua_State *L)
 {
     bannerWrapper = [[PNBannerWrapper alloc] init];
     
@@ -238,22 +238,22 @@ void PluginLibrary::loadBanner(lua_State *L)
     }
 }
 
-void PluginLibrary::showBanner(lua_State *L)
+void PNBannerPlugin::showBanner(lua_State *L)
 {
     [bannerWrapper show];
 }
 
-void PluginLibrary::setBannerPositionToTop(lua_State *L)
+void PNBannerPlugin::setBannerPositionToTop(lua_State *L)
 {
     [bannerWrapper setBannerPositionToTop];
 }
 
-void PluginLibrary::setBannerPositionToBottom(lua_State *L)
+void PNBannerPlugin::setBannerPositionToBottom(lua_State *L)
 {
     [bannerWrapper setBannerPositionToBottom];
 }
 
-void PluginLibrary::setBannerImpressionListener(lua_State *L)
+void PNBannerPlugin::setBannerImpressionListener(lua_State *L)
 {
     if (CoronaLuaIsListener(L, 1, kEvent))
     {
@@ -264,7 +264,7 @@ void PluginLibrary::setBannerImpressionListener(lua_State *L)
     }
 }
 
-void PluginLibrary::setBannerClickListener(lua_State *L)
+void PNBannerPlugin::setBannerClickListener(lua_State *L)
 {
     if (CoronaLuaIsListener(L, 1, kEvent))
     {
@@ -275,7 +275,7 @@ void PluginLibrary::setBannerClickListener(lua_State *L)
     }
 }
 
-void PluginLibrary::hideBanner(lua_State *L)
+void PNBannerPlugin::hideBanner(lua_State *L)
 {
     [bannerWrapper hide];
 }
@@ -284,5 +284,5 @@ void PluginLibrary::hideBanner(lua_State *L)
 
 CORONA_EXPORT int luaopen_plugin_pubnative_banner(lua_State *L)
 {
-    return PluginLibrary::Open(L);
+    return PNBannerPlugin::Open(L);
 }

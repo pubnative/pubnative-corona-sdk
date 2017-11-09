@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/cansoykarafakili/Documents/Pubnative\ Projects/Corona\ Plugin/pubnative-corona-sdk/demo/ios/Plugin/PluginLibrary.mm \
-  /Users/cansoykarafakili/Documents/Pubnative\ Projects/Corona\ Plugin/pubnative-corona-sdk/demo/ios/Plugin/PluginLibrary.h \
+  /Users/cansoykarafakili/Documents/Pubnative\ Projects/Corona\ Plugin/pubnative-corona-sdk/demo/ios/Plugin/BannerPlugin.mm \
+  /Users/cansoykarafakili/Documents/Pubnative\ Projects/Corona\ Plugin/pubnative-corona-sdk/demo/ios/Plugin/BannerPlugin.h \
   /Users/cansoykarafakili/Library/Application\ Support/Corona/Native/Corona/shared/include/Corona/CoronaLua.h \
   /Users/cansoykarafakili/Library/Application\ Support/Corona/Native/Corona/shared/include/Corona/CoronaMacros.h \
   /Users/cansoykarafakili/Library/Application\ Support/Corona/Native/Corona/shared/include/Corona/CoronaLog.h \
