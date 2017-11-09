@@ -15,14 +15,22 @@
 
 PNBannerWrapper *bannerWrapper;
 
+#pragma mark Class Declaration
+
 class PNBannerPlugin
 {
 public:
     typedef PNBannerPlugin Self;
+    
+    static PNBannerPlugin bannerPlugin;
 
     static const char kName[];
     static const char kEvent[];
-    static PNBannerPlugin bannerPlugin;
+    static const int appTokenIndex;
+    static const int placementIndex;
+    static const int loadListenerIndex;
+    static const int impressionListenerIndex;
+    static const int clickListenerIndex;
     
     bool Initialize(CoronaLuaRef listener);
     bool InitializeLoadListener(CoronaLuaRef listener);
@@ -68,7 +76,15 @@ const char PNBannerPlugin::kName[] = "plugin.pubnative.banner";
 // This corresponds to the event name, e.g. [Lua] event.name
 const char PNBannerPlugin::kEvent[] = "pubnativeBanner";
 
+const int PNBannerPlugin::appTokenIndex = 1;
+const int PNBannerPlugin::placementIndex = 2;
+const int PNBannerPlugin::loadListenerIndex = 3;
+const int PNBannerPlugin::impressionListenerIndex = 1;
+const int PNBannerPlugin::clickListenerIndex = 1;
+
 PNBannerPlugin PNBannerPlugin::bannerPlugin;
+
+#pragma mark - Initializers and Corona Methods
 
 PNBannerPlugin::PNBannerPlugin() : fListener(NULL), loadListener(NULL), impressionListener(NULL), clickListener(NULL)
 {
@@ -153,6 +169,13 @@ PNBannerPlugin * PNBannerPlugin::ToLibrary(lua_State *L)
     return library;
 }
 
+CORONA_EXPORT int luaopen_plugin_pubnative_banner(lua_State *L)
+{
+    return PNBannerPlugin::Open(L);
+}
+
+#pragma mark - Public Methods
+
 // [Lua] library.init(listener)
 int PNBannerPlugin::init(lua_State *L)
 {
@@ -195,17 +218,19 @@ int PNBannerPlugin::setClickListener(lua_State *L)
     return 0;
 }
 
+#pragma mark - Private Methods
+
 void PNBannerPlugin::loadBanner(lua_State *L)
 {
     bannerWrapper = [[PNBannerWrapper alloc] init];
     
-    if (CoronaLuaIsListener(L, 3, kEvent)) {
+    if (CoronaLuaIsListener(L, loadListenerIndex, kEvent)) {
         Self *library = ToLibrary(L);
-        loadListener = CoronaLuaNewRef(L, 3);
+        loadListener = CoronaLuaNewRef(L, loadListenerIndex);
         library->InitializeLoadListener(loadListener);
         [bannerWrapper loadWithLuaState:L
-                           withAppToken:[NSString stringWithUTF8String:lua_tostring(L, 1)]
-                          withPlacement:[NSString stringWithUTF8String:lua_tostring(L, 2)]
+                           withAppToken:[NSString stringWithUTF8String:lua_tostring(L, appTokenIndex)]
+                          withPlacement:[NSString stringWithUTF8String:lua_tostring(L, placementIndex)]
                            withListener:library->GetLoadListener()];
     }
 }
@@ -217,9 +242,9 @@ void PNBannerPlugin::showBanner(lua_State *L)
 
 void PNBannerPlugin::setBannerImpressionListener(lua_State *L)
 {
-    if (CoronaLuaIsListener(L, 1, kEvent)) {
+    if (CoronaLuaIsListener(L, impressionListenerIndex, kEvent)) {
         Self *library = ToLibrary(L);
-        impressionListener = CoronaLuaNewRef(L, 1);
+        impressionListener = CoronaLuaNewRef(L, impressionListenerIndex);
         library->InitializeImpressionListener(impressionListener);
         [bannerWrapper setImpressionListener:library->GetImpressionListener()];
     }
@@ -227,9 +252,9 @@ void PNBannerPlugin::setBannerImpressionListener(lua_State *L)
 
 void PNBannerPlugin::setBannerClickListener(lua_State *L)
 {
-    if (CoronaLuaIsListener(L, 1, kEvent)) {
+    if (CoronaLuaIsListener(L, clickListenerIndex, kEvent)) {
         Self *library = ToLibrary(L);
-        clickListener = CoronaLuaNewRef(L, 1);
+        clickListener = CoronaLuaNewRef(L, clickListenerIndex);
         library->InitializeClickListener(clickListener);
         [bannerWrapper setClickListener:library->GetClickListener()];
     }
@@ -238,11 +263,4 @@ void PNBannerPlugin::setBannerClickListener(lua_State *L)
 void PNBannerPlugin::hideBanner(lua_State *L)
 {
     [bannerWrapper hide];
-}
-
-// ----------------------------------------------------------------------------
-
-CORONA_EXPORT int luaopen_plugin_pubnative_banner(lua_State *L)
-{
-    return PNBannerPlugin::Open(L);
 }
