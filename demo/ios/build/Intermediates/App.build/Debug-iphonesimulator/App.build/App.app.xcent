@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>K97RS28HQU.com.mycompany.App</string>
+	<string>K97RS28HQU.net.pubnative.coronaplugin.demo</string>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>K97RS28HQU.com.mycompany.App</string>
+		<string>K97RS28HQU.net.pubnative.coronaplugin.demo</string>
 	</array>
 </dict>
 </plist>
