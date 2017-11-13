@@ -21,6 +21,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		5A8CDB441FB9A517009C1EE8 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8CDB421FB9A516009C1EE8 /* Fabric.framework */; };
+		5A8CDB451FB9A517009C1EE8 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8CDB431FB9A517009C1EE8 /* Crashlytics.framework */; };
+		5A8CDB481FB9A5EC009C1EE8 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8CDB471FB9A5EC009C1EE8 /* libc++.tbd */; };
+		5A8CDB4A1FB9A5F7009C1EE8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8CDB491FB9A5F7009C1EE8 /* libz.tbd */; };
 		5AD816591FB0B1CB009D0BF0 /* Pubnative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD816581FB0B1CB009D0BF0 /* Pubnative.framework */; };
 		5AD8165A1FB0B1CB009D0BF0 /* Pubnative.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD816581FB0B1CB009D0BF0 /* Pubnative.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A447B610165D72FB009EA762 /* AppCoronaDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = A447B60F165D72FB009EA762 /* AppCoronaDelegate.mm */; };
@@ -102,6 +106,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5A8CDB421FB9A516009C1EE8 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		5A8CDB431FB9A517009C1EE8 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		5A8CDB471FB9A5EC009C1EE8 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		5A8CDB491FB9A5F7009C1EE8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		5AD816581FB0B1CB009D0BF0 /* Pubnative.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pubnative.framework; sourceTree = "<group>"; };
 		A447B60E165D72FB009EA762 /* AppCoronaDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppCoronaDelegate.h; sourceTree = SOURCE_ROOT; };
 		A447B60F165D72FB009EA762 /* AppCoronaDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppCoronaDelegate.mm; sourceTree = SOURCE_ROOT; };
@@ -166,11 +174,14 @@
 			files = (
 				F51C66D61EE0D3B20040E4BE /* libplugin_library.a in Frameworks */,
 				E640B2F41BFC00BA0031FAE9 /* Photos.framework in Frameworks */,
+				5A8CDB451FB9A517009C1EE8 /* Crashlytics.framework in Frameworks */,
+				5A8CDB481FB9A5EC009C1EE8 /* libc++.tbd in Frameworks */,
 				E640B2F21BFC00B00031FAE9 /* AssetsLibrary.framework in Frameworks */,
 				F5BB41531BC42ACF0033F6FA /* CoreText.framework in Frameworks */,
 				A46885F418068C2900381941 /* CoreVideo.framework in Frameworks */,
 				A46885F218068C2200381941 /* GLKit.framework in Frameworks */,
 				A4C2449A1683FA5300C395D1 /* Accounts.framework in Frameworks */,
+				5A8CDB4A1FB9A5F7009C1EE8 /* libz.tbd in Frameworks */,
 				A4C2449C1683FA5300C395D1 /* Social.framework in Frameworks */,
 				A484117715128D5D0074BD57 /* AddressBook.framework in Frameworks */,
 				A484117815128D5D0074BD57 /* AddressBookUI.framework in Frameworks */,
@@ -197,6 +208,7 @@
 				A484118715128D5D0074BD57 /* QuartzCore.framework in Frameworks */,
 				A484118815128D5D0074BD57 /* Security.framework in Frameworks */,
 				A484118915128D5D0074BD57 /* StoreKit.framework in Frameworks */,
+				5A8CDB441FB9A517009C1EE8 /* Fabric.framework in Frameworks */,
 				A484118A15128D5D0074BD57 /* SystemConfiguration.framework in Frameworks */,
 				A4E2537F166AE3DC00DCDC2C /* Twitter.framework in Frameworks */,
 				A484111E15114F700074BD57 /* UIKit.framework in Frameworks */,
@@ -229,6 +241,8 @@
 		A484110E15114F700074BD57 = {
 			isa = PBXGroup;
 			children = (
+				5A8CDB431FB9A517009C1EE8 /* Crashlytics.framework */,
+				5A8CDB421FB9A516009C1EE8 /* Fabric.framework */,
 				5AD816581FB0B1CB009D0BF0 /* Pubnative.framework */,
 				A4E253DA166DE7C800DCDC2C /* Plugin.xcodeproj */,
 				A484112715114F700074BD57 /* App */,
@@ -250,6 +264,8 @@
 		A484111C15114F700074BD57 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A8CDB491FB9A5F7009C1EE8 /* libz.tbd */,
+				5A8CDB471FB9A5EC009C1EE8 /* libc++.tbd */,
 				E640B2F31BFC00BA0031FAE9 /* Photos.framework */,
 				E640B2F11BFC00B00031FAE9 /* AssetsLibrary.framework */,
 				F5E548081BE7FF0200091810 /* GameController.framework */,
@@ -340,6 +356,7 @@
 				A484118F1512906B0074BD57 /* Certify Corona Build */,
 				A484119015129A930074BD57 /* Touch main.mm to ensure build */,
 				5AD8165B1FB0B1CB009D0BF0 /* Embed Frameworks */,
+				5A8CDB461FB9A52B009C1EE8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -360,7 +377,7 @@
 				LastUpgradeCheck = 0910;
 				TargetAttributes = {
 					A484111815114F700074BD57 = {
-						DevelopmentTeam = K97RS28HQU;
+						DevelopmentTeam = J6V7N93E53;
 					};
 					F597AC6E1ED8CA3E0085F5E5 = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -422,6 +439,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5A8CDB461FB9A52B009C1EE8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run f61a9f30a8156746aae4b1cc84856189a3bf8575 537c5f9f76b46d7a1d200e942627095296d712b141ae62d982d273c1ef1bd9ee";
+		};
 		A4841162151268030074BD57 /* Compile Corona Project */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -647,7 +677,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = K97RS28HQU;
+				DEVELOPMENT_TEAM = J6V7N93E53;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -674,7 +704,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = K97RS28HQU;
+				DEVELOPMENT_TEAM = J6V7N93E53;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

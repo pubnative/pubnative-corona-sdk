@@ -60,6 +60,20 @@
 	<string>0910</string>
 	<key>DTXcodeBuild</key>
 	<string>9B55</string>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>f61a9f30a8156746aae4b1cc84856189a3bf8575</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict/>
+				<key>KitName</key>
+				<string>Crashlytics</string>
+			</dict>
+		</array>
+	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MinimumOSVersion</key>
