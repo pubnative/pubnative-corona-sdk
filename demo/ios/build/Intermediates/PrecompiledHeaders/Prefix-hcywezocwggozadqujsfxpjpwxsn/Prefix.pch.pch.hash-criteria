@@ -1,0 +1,34 @@
+-x
+objective-c++
+-arch
+x86_64
+-std=c++11
+-stdlib=libc++
+-gmodules
+-fpascal-strings
+-O2
+-fno-common
+-DOBJC_OLD_DISPATCH_PROTOTYPES=0
+-isysroot
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.1.sdk
+-fasm-blocks
+-mios-simulator-version-min=8.0
+-g
+-fvisibility=hidden
+-fvisibility-inlines-hidden
+-fobjc-abi-version=2
+-fobjc-legacy-dispatch
+-iquote
+-iquote
+-I/Users/cansoykarafakili/Documents/Pubnative Projects/Corona Plugin/pubnative-corona-sdk/demo/ios/build/Products/Release-iphonesimulator/include
+-I/Users/cansoykarafakili/Library/Application Support/Corona/Native/Corona/shared/include/Corona
+-I/Users/cansoykarafakili/Library/Application Support/Corona/Native/Corona/shared/include/lua
+-I/Users/cansoykarafakili/Library/Application Support/Corona/Native/Corona/ios/include/Corona
+-F/Users/cansoykarafakili/Documents/Pubnative Projects/Corona Plugin/pubnative-corona-sdk/demo/ios/build/Products/Release-iphonesimulator
+-F/Users/cansoykarafakili/Documents/Pubnative Projects/Corona Plugin/pubnative-corona-sdk/demo/ios/EmbeddedFrameworks
+-F/Users/cansoykarafakili/Documents/Pubnative Projects/Corona Plugin/pubnative-corona-sdk/demo/ios
+-DNS_BLOCK_ASSERTIONS=1
+x86_64-apple-darwin17.0.0
+"4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)"
+SDK_PRODUCT_BUILD_VERSION=15B87
+15B87

@@ -10,6 +10,9 @@
 #import <CoronaRuntime.h>
 #import <CoronaLua.h>
 
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
+
 @implementation AppCoronaDelegate
 
 - (void)willLoadMain:(id<CoronaRuntime>)runtime
@@ -25,6 +28,12 @@
 // The following are stubs for common delegate methods. Uncomment and implement
 // the ones you wish to be called. Or add additional delegate methods that
 // you wish to be called.
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    [Fabric with:@[[Crashlytics class]]];
+    return YES;
+}
 
 /*
 - (void)applicationWillResignActive:(UIApplication *)application
