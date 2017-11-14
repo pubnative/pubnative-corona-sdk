@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5A1201141FBB007E006086D2 /* PNInterstitialWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1201131FBB007E006086D2 /* PNInterstitialWrapper.m */; };
+		5A1201171FBB0280006086D2 /* PNInterstitialPlugin.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5A1201151FBB027F006086D2 /* PNInterstitialPlugin.mm */; };
 		5AD816611FB0BD9D009D0BF0 /* PNBannerWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD8165F1FB0BD9D009D0BF0 /* PNBannerWrapper.m */; };
 		5AD816621FB0BD9D009D0BF0 /* PNAdWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD816601FB0BD9D009D0BF0 /* PNAdWrapper.m */; };
 		A4E253C9166D716900DCDC2C /* PNBannerPlugin.mm in Sources */ = {isa = PBXBuildFile; fileRef = A447B617165D734C009EA762 /* PNBannerPlugin.mm */; };
@@ -28,6 +29,8 @@
 /* Begin PBXFileReference section */
 		5A1201121FBB007D006086D2 /* PNInterstitialWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNInterstitialWrapper.h; sourceTree = "<group>"; };
 		5A1201131FBB007E006086D2 /* PNInterstitialWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNInterstitialWrapper.m; sourceTree = "<group>"; };
+		5A1201151FBB027F006086D2 /* PNInterstitialPlugin.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PNInterstitialPlugin.mm; sourceTree = "<group>"; };
+		5A1201161FBB027F006086D2 /* PNInterstitialPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNInterstitialPlugin.h; sourceTree = "<group>"; };
 		5AD8165D1FB0BD9C009D0BF0 /* PNAdWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNAdWrapper.h; sourceTree = "<group>"; };
 		5AD8165E1FB0BD9D009D0BF0 /* PNBannerWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNBannerWrapper.h; sourceTree = "<group>"; };
 		5AD8165F1FB0BD9D009D0BF0 /* PNBannerWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNBannerWrapper.m; sourceTree = "<group>"; };
@@ -60,6 +63,8 @@
 				5A1201131FBB007E006086D2 /* PNInterstitialWrapper.m */,
 				A447B616165D734C009EA762 /* PNBannerPlugin.h */,
 				A447B617165D734C009EA762 /* PNBannerPlugin.mm */,
+				5A1201161FBB027F006086D2 /* PNInterstitialPlugin.h */,
+				5A1201151FBB027F006086D2 /* PNInterstitialPlugin.mm */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 				5A1201141FBB007E006086D2 /* PNInterstitialWrapper.m in Sources */,
 				5AD816611FB0BD9D009D0BF0 /* PNBannerWrapper.m in Sources */,
 				5AD816621FB0BD9D009D0BF0 /* PNAdWrapper.m in Sources */,
+				5A1201171FBB0280006086D2 /* PNInterstitialPlugin.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
