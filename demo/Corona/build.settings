@@ -9,7 +9,7 @@ settings =
 	orientation =
 	{
 		default = "portrait",
-		supported = { "portrait" }
+		supported = { "portrait","landscapeLeft", "landscapeRight" }
 	},
 	--]]
 
@@ -17,6 +17,12 @@ settings =
 	{
 		plist =
 		{
+		CoronaViewSupportedInterfaceOrientations =
+		{
+			"UIInterfaceOrientationPortrait",
+			"UIInterfaceOrientationLandscapeLeft",
+			"UIInterfaceOrientationLandscapeRight",
+		},
 			UILaunchStoryboardName = "LaunchScreen",
 			CFBundleIconFiles =
 			{

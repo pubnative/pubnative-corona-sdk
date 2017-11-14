@@ -8,8 +8,8 @@ composer.recycleOnSceneChange = true
 local interstitial = require( "plugin.pubnative.interstitial" )
 
 -- Parameters for Pubnative Interstitial
-local APP_TOKEN = "de7a474dabc79eac1400b62bd6f6dc408f27b92a863f58db3d8584b2bd25f91c";
-local PLACEMENT = "asset_group_16";
+local APP_TOKEN = "2c6fdfd723dd4a6ba52e8e6878138145";
+local PLACEMENT = "iOS_asset_group_20";
 
 -- ------------------------------------------------------------------------------
 -- Spinner

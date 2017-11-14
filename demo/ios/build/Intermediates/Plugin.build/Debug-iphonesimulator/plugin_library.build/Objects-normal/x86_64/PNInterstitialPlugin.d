@@ -48,5 +48,4 @@ dependencies: \
   /Users/cansoykarafakili/Documents/Pubnative\ Projects/Corona\ Plugin/pubnative-corona-sdk/demo/ios/Pubnative.framework/Headers/PNAPIRequestParameter.h \
   /Users/cansoykarafakili/Documents/Pubnative\ Projects/Corona\ Plugin/pubnative-corona-sdk/demo/ios/Pubnative.framework/Headers/PNBanner.h \
   /Users/cansoykarafakili/Documents/Pubnative\ Projects/Corona\ Plugin/pubnative-corona-sdk/demo/ios/Pubnative.framework/Headers/PNAdModel+Native.h \
-  /Users/cansoykarafakili/Documents/Pubnative\ Projects/Corona\ Plugin/pubnative-corona-sdk/demo/ios/PNInterstitialWrapper.h \
-  /Users/cansoykarafakili/Documents/Pubnative\ Projects/Corona\ Plugin/pubnative-corona-sdk/demo/ios/PNAdWrapper.h
+  /Users/cansoykarafakili/Documents/Pubnative\ Projects/Corona\ Plugin/pubnative-corona-sdk/demo/ios/PNInterstitialWrapper.h

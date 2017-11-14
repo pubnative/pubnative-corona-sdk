@@ -40,7 +40,6 @@ dependencies: \
   /Users/cansoykarafakili/Documents/Pubnative\ Projects/Corona\ Plugin/pubnative-corona-sdk/demo/ios/Pubnative.framework/Headers/PNAPIRequestParameter.h \
   /Users/cansoykarafakili/Documents/Pubnative\ Projects/Corona\ Plugin/pubnative-corona-sdk/demo/ios/Pubnative.framework/Headers/PNBanner.h \
   /Users/cansoykarafakili/Documents/Pubnative\ Projects/Corona\ Plugin/pubnative-corona-sdk/demo/ios/Pubnative.framework/Headers/PNAdModel+Native.h \
-  /Users/cansoykarafakili/Documents/Pubnative\ Projects/Corona\ Plugin/pubnative-corona-sdk/demo/ios/PNAdWrapper.h \
   /Users/cansoykarafakili/Library/Application\ Support/Corona/Native/Corona/shared/include/Corona/CoronaLua.h \
   /Users/cansoykarafakili/Library/Application\ Support/Corona/Native/Corona/shared/include/Corona/CoronaMacros.h \
   /Users/cansoykarafakili/Library/Application\ Support/Corona/Native/Corona/shared/include/Corona/CoronaLog.h \

@@ -8,13 +8,22 @@
 
 #import <Foundation/Foundation.h>
 #import <Pubnative/Pubnative.h>
-#import "PNAdWrapper.h"
+#import <CoronaLua.h>
 
-@interface PNInterstitialWrapper : PNAdWrapper <PNLayoutViewDelegate>
+@interface PNInterstitialWrapper : NSObject <PNLayoutLoadDelegate, PNLayoutTrackDelegate, PNLayoutViewDelegate>
 
 @property(nonatomic, strong) PNLargeLayout *interstitial;
+@property (nonatomic, assign) lua_State *luaState;
+@property (nonatomic, assign) CoronaLuaRef loadListener;
+@property (nonatomic, assign) CoronaLuaRef impressionListener;
+@property (nonatomic, assign) CoronaLuaRef clickListener;
+@property (nonatomic, assign) CoronaLuaRef showListener;
+@property (nonatomic, assign) CoronaLuaRef hideListener;
 
-- (void)loadWithAppToken:(NSString*)appToken withPlacement:(NSString*)placement;
+- (void)loadWithLuaState:(lua_State *)lua_State
+            withAppToken:(NSString*)appToken
+           withPlacement:(NSString*)placement
+            withListener:(CoronaLuaRef)loadListener;
 - (void)show;
 - (void)hide;
 

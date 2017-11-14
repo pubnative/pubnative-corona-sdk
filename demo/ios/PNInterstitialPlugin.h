@@ -13,6 +13,6 @@
 
 // This corresponds to the name of the library, e.g. [Lua] require "plugin.library"
 // where the '.' is replaced with '_'
-CORONA_EXPORT int luaopen_plugin_library(lua_State *L);
+CORONA_EXPORT int luaopen_plugin_pubnative_interstitial(lua_State *L);
 
 #endif // _PNInterstitialPlugin_H__
