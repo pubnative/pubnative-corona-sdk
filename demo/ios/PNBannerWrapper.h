@@ -18,4 +18,5 @@
 - (void)hide;
 - (NSInteger)topPosition;
 - (NSInteger)bottomPosition;
+
 @end
