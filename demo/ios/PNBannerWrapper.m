@@ -73,15 +73,13 @@ NSString * const kCoronaBannerErrorKey = @"isError";
 - (void)layout:(PNLayout *)layout didFailLoading:(NSError *)error
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        lua_State *error_luaState = self.luaState;
-        CoronaLuaNewEvent(error_luaState, [kCoronaBannerEventName UTF8String]);
-        lua_pushstring(error_luaState, [error.localizedDescription UTF8String]);
-        lua_setfield(error_luaState, -2, [kCoronaBannerResponseKey UTF8String]);
-        lua_pushboolean(error_luaState, 1);
-        lua_setfield(error_luaState, -2, [kCoronaBannerErrorKey UTF8String]);
-        CoronaLuaDispatchEvent(error_luaState, self.loadListener, 0);
+        CoronaLuaNewEvent(self.luaState, [kCoronaBannerEventName UTF8String]);
+        lua_pushstring(self.luaState, [error.localizedDescription UTF8String]);
+        lua_setfield(self.luaState, -2, [kCoronaBannerResponseKey UTF8String]);
+        lua_pushboolean(self.luaState, 1);
+        lua_setfield(self.luaState, -2, [kCoronaBannerErrorKey UTF8String]);
+        CoronaLuaDispatchEvent(self.luaState, self.loadListener, 0);
     });
-    
 }
 
 #pragma mark - PNLayoutTrackDelegate Methods

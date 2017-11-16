@@ -64,40 +64,40 @@ end
 -- Pubnative SDK TrackListeners
 local function impressionListener(event)
   -- Do something, if Impression tracked
-  native.showAlert(
-    "Insights",
-    "Impression tracked!",
-    { "OK" }
-  )
+--  native.showAlert(
+--    "Insights",
+--    "Impression tracked!",
+--    { "OK" }
+--  )
 end
 
 local function clickListener(event)
   -- Do something, if Click tracked
-  native.showAlert(
-    "Insights",
-    "Click tracked!",
-    { "OK" }
-  )
+--  native.showAlert(
+--    "Insights",
+--    "Click tracked!",
+--    { "OK" }
+--  )
   interstitial.hide()
 end
 
 -- Pubnative SDK ViewListeners
 local function showListener(event)
   -- Do something, if view shown
-  native.showAlert(
-    "View",
-    "View shown!",
-    { "OK" }
-  )
+--  native.showAlert(
+--    "View",
+--    "View shown!",
+--    { "OK" }
+--  )
 end
 
 local function hideListener(event)
   -- Do something, if view hidden
-  native.showAlert(
-    "View",
-    "View hidden!",
-    { "OK" }
-  )
+--  native.showAlert(
+--    "View",
+--    "View hidden!",
+--    { "OK" }
+--  )
 end
 
 -- -----------------------------------------------------------------------------
