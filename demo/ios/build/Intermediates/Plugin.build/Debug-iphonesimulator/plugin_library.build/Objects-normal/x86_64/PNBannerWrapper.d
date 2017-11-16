@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/cansoykarafakili/Documents/Pubnative\ Projects/Corona\ Plugin/pubnative-corona-sdk/demo/ios/PNBannerWrapper.m \
-  /Users/cansoykarafakili/Documents/Pubnative\ Projects/Corona\ Plugin/pubnative-corona-sdk/demo/ios/PNBannerWrapper.h \
+  /Users/cansoykarafakili/Documents/Pubnative\ Projects/Corona\ Plugin/pubnative-corona-sdk/demo/ios/PluginBanner/PNBannerWrapper.m \
+  /Users/cansoykarafakili/Documents/Pubnative\ Projects/Corona\ Plugin/pubnative-corona-sdk/demo/ios/PluginBanner/PNBannerWrapper.h \
   /Users/cansoykarafakili/Documents/Pubnative\ Projects/Corona\ Plugin/pubnative-corona-sdk/demo/ios/Pubnative.framework/Headers/Pubnative.h \
   /Users/cansoykarafakili/Documents/Pubnative\ Projects/Corona\ Plugin/pubnative-corona-sdk/demo/ios/Pubnative.framework/Headers/PNRequest.h \
   /Users/cansoykarafakili/Documents/Pubnative\ Projects/Corona\ Plugin/pubnative-corona-sdk/demo/ios/Pubnative.framework/Headers/PNAdModel.h \

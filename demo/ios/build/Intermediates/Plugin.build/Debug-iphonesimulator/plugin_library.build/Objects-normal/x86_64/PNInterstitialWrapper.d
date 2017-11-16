@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/cansoykarafakili/Documents/Pubnative\ Projects/Corona\ Plugin/pubnative-corona-sdk/demo/ios/PNInterstitialWrapper.m \
-  /Users/cansoykarafakili/Documents/Pubnative\ Projects/Corona\ Plugin/pubnative-corona-sdk/demo/ios/PNInterstitialWrapper.h \
+  /Users/cansoykarafakili/Documents/Pubnative\ Projects/Corona\ Plugin/pubnative-corona-sdk/demo/ios/PluginInterstitial/PNInterstitialWrapper.m \
+  /Users/cansoykarafakili/Documents/Pubnative\ Projects/Corona\ Plugin/pubnative-corona-sdk/demo/ios/PluginInterstitial/PNInterstitialWrapper.h \
   /Users/cansoykarafakili/Documents/Pubnative\ Projects/Corona\ Plugin/pubnative-corona-sdk/demo/ios/Pubnative.framework/Headers/Pubnative.h \
   /Users/cansoykarafakili/Documents/Pubnative\ Projects/Corona\ Plugin/pubnative-corona-sdk/demo/ios/Pubnative.framework/Headers/PNRequest.h \
   /Users/cansoykarafakili/Documents/Pubnative\ Projects/Corona\ Plugin/pubnative-corona-sdk/demo/ios/Pubnative.framework/Headers/PNAdModel.h \
