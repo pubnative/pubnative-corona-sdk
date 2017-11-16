@@ -5,11 +5,11 @@
 //  Copyright © 2017 Can Soykarafakili. All rights reserved.
 //
 
-#import "PNBannerPlugin.h"
 #include <CoronaRuntime.h>
 #import <UIKit/UIKit.h>
 #import <Pubnative/Pubnative.h>
 #import "PNBannerWrapper.h"
+#import "PNBannerPlugin.h"
 
 // ----------------------------------------------------------------------------
 
@@ -200,7 +200,7 @@ int PNBannerPlugin::show(lua_State *L)
     return 0;
 }
 
-int PNBannerPlugin:: hide(lua_State *L)
+int PNBannerPlugin::hide(lua_State *L)
 {
     bannerPlugin.hideBanner(L);
     return 0;

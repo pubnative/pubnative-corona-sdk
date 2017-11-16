@@ -326,7 +326,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		tpmo8bt0bxK2Lzb2pAJYXhy2+DE=
+		Kt1vbIcvHDGuM++CE395JaPA5Qw=
 		</data>
 		<key>LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -346,11 +346,11 @@
 		</data>
 		<key>MainWindow-iPad.nib</key>
 		<data>
-		9aoVCDcbnD1/1BgtkTZ9NGbfOCU=
+		YWd8esYZhSax5SeIkFNSWNidF8A=
 		</data>
 		<key>MainWindow.nib</key>
 		<data>
-		vqqTVM0yTpAoRt9H1Pr91d4PJzc=
+		U5VEkx3VAfNmdL2mXkaf7q5I4hw=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -379,7 +379,7 @@
 		</dict>
 		<key>interstitial.lu</key>
 		<data>
-		EUQBZj5l46Q+9aflhjVmaBDVwOI=
+		MpCvRp3itZ3sMyLlfBM5SvJqloU=
 		</data>
 		<key>main.lu</key>
 		<data>
@@ -391,7 +391,7 @@
 		</data>
 		<key>resource.corona-archive</key>
 		<data>
-		kyrTBCiKZlek0Qmm3PMs+ZhGWao=
+		6/PBgEKoRdKld2CVipw7wwNm3w4=
 		</data>
 		<key>spinner.png</key>
 		<data>
@@ -1328,22 +1328,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9aoVCDcbnD1/1BgtkTZ9NGbfOCU=
+			YWd8esYZhSax5SeIkFNSWNidF8A=
 			</data>
 			<key>hash2</key>
 			<data>
-			WNy2LKT74+ocddf3wSOTwnG3UsS/eX52SatCG00cA7E=
+			5EpNb5iTNBtvoNQg3/Ibb0JawIi3waOYxtE6ne7aGPw=
 			</data>
 		</dict>
 		<key>MainWindow.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vqqTVM0yTpAoRt9H1Pr91d4PJzc=
+			U5VEkx3VAfNmdL2mXkaf7q5I4hw=
 			</data>
 			<key>hash2</key>
 			<data>
-			i2mUC+5p+7KiFjP8cr8A9Ua+2kKvpJfUTgfFJzwlxzw=
+			leu55tIIJqsZId2dhIgT3FHfqDX49zYlTkKulPNmN8c=
 			</data>
 		</dict>
 		<key>_CoronaSplashScreen.png</key>
@@ -1396,11 +1396,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			EUQBZj5l46Q+9aflhjVmaBDVwOI=
+			MpCvRp3itZ3sMyLlfBM5SvJqloU=
 			</data>
 			<key>hash2</key>
 			<data>
-			EXKmL8CQyQfGN/40Do2foa4lMPLYmTGYZnzwOwd4ucc=
+			bLRTEegzQr/Vw9i8EOiQkcHQ9WI2zJVOe5Kur1WSuos=
 			</data>
 		</dict>
 		<key>main.lu</key>
@@ -1429,11 +1429,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			kyrTBCiKZlek0Qmm3PMs+ZhGWao=
+			6/PBgEKoRdKld2CVipw7wwNm3w4=
 			</data>
 			<key>hash2</key>
 			<data>
-			VbQkBYkeqHcgn4Xs6ziffccmvqQHHM5G5S9MFjZdr/c=
+			CT3MOrn/IuBxxJzIFnRv4CQTpIyZySoxl23Kur0NBus=
 			</data>
 		</dict>
 		<key>spinner.png</key>

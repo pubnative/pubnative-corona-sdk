@@ -8,6 +8,10 @@
 
 #import "PNBannerWrapper.h"
 
+NSString * const kCoronaBannerEventName = @"pubnativeBanner";
+NSString * const kCoronaBannerResponseKey = @"response";
+NSString * const kCoronaBannerErrorKey = @"isError";
+
 @implementation PNBannerWrapper
 
 - (void)dealloc
@@ -54,6 +58,46 @@
 - (void)hide
 {
     [self.banner hide];
+}
+
+#pragma mark - PNLayoutLoadDelegate Methods
+
+- (void)layoutDidFinishLoading:(PNLayout *)layout
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        CoronaLuaNewEvent(self.luaState, [kCoronaBannerEventName UTF8String]);
+        CoronaLuaDispatchEvent(self.luaState, self.loadListener, 0);
+    });
+}
+
+- (void)layout:(PNLayout *)layout didFailLoading:(NSError *)error
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        CoronaLuaNewEvent(self.luaState, [kCoronaBannerEventName UTF8String]);
+        lua_pushstring(self.luaState, [error.localizedDescription UTF8String]);
+        lua_setfield(self.luaState, -2, [kCoronaBannerResponseKey UTF8String]);
+        lua_pushboolean(self.luaState, 1);
+        lua_setfield(self.luaState, -2, [kCoronaBannerErrorKey UTF8String]);
+        CoronaLuaDispatchEvent(self.luaState, self.loadListener, 0);
+    });
+}
+
+#pragma mark - PNLayoutTrackDelegate Methods
+
+- (void)layoutTrackImpression:(PNLayout *)layout
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        CoronaLuaNewEvent(self.luaState, [kCoronaBannerEventName UTF8String]);
+        CoronaLuaDispatchEvent(self.luaState, self.impressionListener, 0);
+    });
+}
+
+- (void)layoutTrackClick:(PNLayout *)layout
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        CoronaLuaNewEvent(self.luaState, [kCoronaBannerEventName UTF8String]);
+        CoronaLuaDispatchEvent(self.luaState, self.clickListener, 0);
+    });
 }
 
 @end
