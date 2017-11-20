@@ -8,9 +8,10 @@ composer.recycleOnSceneChange = true
 -- Pubnative Banner Plugin
 local banner = require( "plugin.pubnative.banner" )
 
--- Parameters for Pubnative Interstitial
-local APP_TOKEN = "de7a474dabc79eac1400b62bd6f6dc408f27b92a863f58db3d8584b2bd25f91c";
-local PLACEMENT = "asset_group_1";
+-- Parameters for Pubnative Banner
+local APP_TOKEN = "2c6fdfd723dd4a6ba52e8e6878138145";
+local PLACEMENT = "iOS_asset_group_1";
+local bannerPosition = 1;
 
 -- ------------------------------------------------------------------------------
 -- Spinner
@@ -165,20 +166,19 @@ local pubnativeShowBannerButton = widget.newButton
   label = "Show",
   onRelease = function( event )
     -- --------------------------------------------------------------------------
-    -- For displaying banner on the screen, you should set banner position
-    -- by methods setBannerPositionTop() or setBannerPositionBottom().
-    -- Set Impression Listener and Click Listener,
+    -- For displaying banner on the screen, you should set
+    -- Impression Listener and Click Listener,
     -- if you want detect impressions and clicks for the ads
     -- And then use show() method
     -- --------------------------------------------------------------------------
     if(bannerTop.isOn) then
-      banner.setBannerPositionTop()
+      bannerPosition = 1;
     elseif(bannerBottom.isOn) then
-      banner.setBannerPositionBottom()
+      bannerPosition = 2;
     end
     banner.setImpressionListener(impressionListener)
     banner.setClickListener(clickListener)
-    banner.show()
+    banner.show(bannerPosition)
   end,
 }
 
