@@ -365,6 +365,17 @@ public class LuaLoader implements JavaFunction, CoronaRuntimeListener {
          */
         @Override
         public int invoke(LuaState L) {
+            int index = 1;
+            int position = L.checkInteger(index);
+
+            if (mBanner != null) {
+                if (position == 1) {
+                    mBanner.setPositionTop();
+                } else {
+                    mBanner.setPositionBottom();
+                }
+            }
+
             return show();
         }
     }
