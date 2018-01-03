@@ -9,7 +9,7 @@ local interstitial = require( "plugin.pubnative.interstitial" )
 
 -- Parameters for Pubnative Interstitial
 local APP_TOKEN = "2c6fdfd723dd4a6ba52e8e6878138145";
-local PLACEMENT = "iOS_asset_group_20";
+local PLACEMENT = "mraid_large";
 
 -- ------------------------------------------------------------------------------
 -- Spinner
