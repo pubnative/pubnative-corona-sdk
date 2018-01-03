@@ -21,12 +21,12 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		5A32F22A1FFD0293001F52CD /* Pubnative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A32F2291FFD0293001F52CD /* Pubnative.framework */; };
-		5A32F22B1FFD0293001F52CD /* Pubnative.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A32F2291FFD0293001F52CD /* Pubnative.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5A8CDB441FB9A517009C1EE8 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8CDB421FB9A516009C1EE8 /* Fabric.framework */; };
 		5A8CDB451FB9A517009C1EE8 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8CDB431FB9A517009C1EE8 /* Crashlytics.framework */; };
 		5A8CDB481FB9A5EC009C1EE8 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8CDB471FB9A5EC009C1EE8 /* libc++.tbd */; };
 		5A8CDB4A1FB9A5F7009C1EE8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8CDB491FB9A5F7009C1EE8 /* libz.tbd */; };
+		5AA975991FFD3EE1006C72E2 /* Pubnative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA975981FFD3EE1006C72E2 /* Pubnative.framework */; };
+		5AA9759A1FFD3EE1006C72E2 /* Pubnative.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA975981FFD3EE1006C72E2 /* Pubnative.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A447B610165D72FB009EA762 /* AppCoronaDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = A447B60F165D72FB009EA762 /* AppCoronaDelegate.mm */; };
 		A447B6671666FD02009EA762 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A447B6641666FD02009EA762 /* MainWindow-iPad.xib */; };
 		A447B6681666FD02009EA762 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A447B6651666FD02009EA762 /* MainWindow.xib */; };
@@ -92,13 +92,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		5A32F22C1FFD0293001F52CD /* Embed Frameworks */ = {
+		5AA9759B1FFD3EE1006C72E2 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5A32F22B1FFD0293001F52CD /* Pubnative.framework in Embed Frameworks */,
+				5AA9759A1FFD3EE1006C72E2 /* Pubnative.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,12 +106,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5A32F2291FFD0293001F52CD /* Pubnative.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pubnative.framework; path = EmbeddedFrameworks/Pubnative.framework; sourceTree = "<group>"; };
 		5A8CDB421FB9A516009C1EE8 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		5A8CDB431FB9A517009C1EE8 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		5A8CDB471FB9A5EC009C1EE8 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		5A8CDB491FB9A5F7009C1EE8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		5AD816581FB0B1CB009D0BF0 /* Pubnative.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pubnative.framework; sourceTree = "<group>"; };
+		5AA975981FFD3EE1006C72E2 /* Pubnative.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pubnative.framework; path = EmbeddedFrameworks/Pubnative.framework; sourceTree = "<group>"; };
 		A447B60E165D72FB009EA762 /* AppCoronaDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppCoronaDelegate.h; sourceTree = SOURCE_ROOT; };
 		A447B60F165D72FB009EA762 /* AppCoronaDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppCoronaDelegate.mm; sourceTree = SOURCE_ROOT; };
 		A447B6641666FD02009EA762 /* MainWindow-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "MainWindow-iPad.xib"; path = "Corona/ios/resource/MainWindow-iPad.xib"; sourceTree = "<group>"; };
@@ -194,7 +193,7 @@
 				A484117D15128D5D0074BD57 /* CoreMedia.framework in Frameworks */,
 				A484117E15128D5D0074BD57 /* CoreMotion.framework in Frameworks */,
 				A484112015114F700074BD57 /* Foundation.framework in Frameworks */,
-				5A32F22A1FFD0293001F52CD /* Pubnative.framework in Frameworks */,
+				5AA975991FFD3EE1006C72E2 /* Pubnative.framework in Frameworks */,
 				A484117F15128D5D0074BD57 /* GameKit.framework in Frameworks */,
 				F5E548091BE7FF0200091810 /* GameController.framework in Frameworks */,
 				A484118015128D5D0074BD57 /* ImageIO.framework in Frameworks */,
@@ -242,10 +241,9 @@
 		A484110E15114F700074BD57 = {
 			isa = PBXGroup;
 			children = (
-				5A32F2291FFD0293001F52CD /* Pubnative.framework */,
+				5AA975981FFD3EE1006C72E2 /* Pubnative.framework */,
 				5A8CDB431FB9A517009C1EE8 /* Crashlytics.framework */,
 				5A8CDB421FB9A516009C1EE8 /* Fabric.framework */,
-				5AD816581FB0B1CB009D0BF0 /* Pubnative.framework */,
 				A4E253DA166DE7C800DCDC2C /* Plugin.xcodeproj */,
 				A484112715114F700074BD57 /* App */,
 				A447B823166856C7009EA762 /* Corona */,
@@ -358,7 +356,7 @@
 				A484118F1512906B0074BD57 /* Certify Corona Build */,
 				A484119015129A930074BD57 /* Touch main.mm to ensure build */,
 				5A8CDB461FB9A52B009C1EE8 /* ShellScript */,
-				5A32F22C1FFD0293001F52CD /* Embed Frameworks */,
+				5AA9759B1FFD3EE1006C72E2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

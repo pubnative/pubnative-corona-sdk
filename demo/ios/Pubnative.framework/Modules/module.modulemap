@@ -1,6 +1,0 @@
-framework module Pubnative {
-  umbrella header "Pubnative.h"
-
-  export *
-  module * { export * }
-}
