@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>17A405</string>
+	<string>17B1003</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -39,7 +39,7 @@
 		<string>iPhoneSimulator</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>3</string>
+	<string>4</string>
 	<key>CoronaViewSupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -53,15 +53,15 @@
 	<key>DTPlatformName</key>
 	<string>iphonesimulator</string>
 	<key>DTPlatformVersion</key>
-	<string>11.1</string>
+	<string>11.2</string>
 	<key>DTSDKBuild</key>
-	<string>15B87</string>
+	<string>15C107</string>
 	<key>DTSDKName</key>
-	<string>iphonesimulator11.1</string>
+	<string>iphonesimulator11.2</string>
 	<key>DTXcode</key>
-	<string>0910</string>
+	<string>0920</string>
 	<key>DTXcodeBuild</key>
-	<string>9B55</string>
+	<string>9C40b</string>
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
